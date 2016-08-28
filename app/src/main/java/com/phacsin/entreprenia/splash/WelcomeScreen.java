@@ -36,6 +36,7 @@ public class WelcomeScreen extends AppCompatActivity {
     private Button btnSkip, btnNext;
     private SharedPref prefManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
