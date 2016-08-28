@@ -1,0 +1,199 @@
+<com.flavienlaurent.discrollview.lib.DiscrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:discrollve="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.flavienlaurent.discrollview.lib.DiscrollViewContent
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.phacsin.entreprenia.customfonts.Helvetica
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:background="@android:color/white"
+                android:textColor="@color/blue_500"
+                android:padding="25dp"
+                android:textSize="50sp"
+                android:gravity="center"
+                android:text="Do you know Entreprenia 15?" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/blue"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_threshold="0.3" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_translation="fromLeft"
+                android:src="@drawable/ent" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/green"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_threshold="0.3" />
+<!--
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:src="@drawable/i2p_1"
+                discrollve:discrollve_translation="fromBottom" />-->
+          <!--  <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/grey"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_threshold="0.3" />
+-->
+          <!--  <ImageView
+                android:layout_width="220dp"
+                android:layout_height="110dp"
+                android:layout_gravity="right"
+                android:src="@drawable/coc"
+                discrollve:discrollve_translation="fromRight" />-->
+
+            <com.phacsin.entreprenia.customfonts.Helvetica
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="For the first time in South India,an Engineering College organised such a summit. The summit was packed with competitions, talks, workshops, panel discussions and kickstarter.It was a 2 day Summit hosted in NSS College of Engineering, Palakkad at September 19,20 2015 by the IEDC Cell, NSSCE in association with District Industries Centre, Palakkad, Kerala."
+                android:textSize="18sp"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_translation="fromRight" />
+
+            <include layout="@layout/event_fragment_divider"/>
+
+           <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:layout_marginTop="20dp"
+               android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/dignitaries"
+                discrollve:discrollve_scaleX="true"
+                discrollve:discrollve_scaleY="true"  />
+            <com.phacsin.entreprenia.customfonts.Helvetica
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="16"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_translation="fromBottom" />
+            <com.phacsin.entreprenia.customfonts.Helvetica
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="Dignitaries"
+                android:layout_marginBottom="5dp"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_translation="fromLeft" />
+            <include layout="@layout/event_fragment_divider"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/visited"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_translation="fromRight" />
+            <com.phacsin.entreprenia.customfonts.Helvetica
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="1200"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_translation="fromBottom" />
+            <com.phacsin.entreprenia.customfonts.Helvetica
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="Delegates"
+                android:layout_marginBottom="5dp"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_translation="fromRight" />
+            <include layout="@layout/event_fragment_divider"/>
+            <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/speekers"
+            discrollve:discrollve_scaleX="true"
+            discrollve:discrollve_scaleY="true"  />
+            <com.phacsin.entreprenia.customfonts.Helvetica
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="22"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_translation="fromBottom" />
+            <com.phacsin.entreprenia.customfonts.Helvetica
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="Events"
+                discrollve:discrollve_alpha="true"
+                android:layout_marginBottom="5dp"
+                discrollve:discrollve_translation="fromLeft" />
+
+            <include layout="@layout/event_fragment_divider"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/rocket"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_translation="fromLeft"/>
+            <com.phacsin.entreprenia.customfonts.Helvetica
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="36"
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_translation="fromBottom" />
+            <com.phacsin.entreprenia.customfonts.Helvetica
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="Startups"
+                discrollve:discrollve_alpha="true"
+                android:layout_marginBottom="5dp"
+                discrollve:discrollve_translation="fromRight" />
+
+            <include layout="@layout/event_fragment_divider"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_gravity="center"
+                android:src="@drawable/startup"
+                discrollve:discrollve_translation="fromBottom"/>
+        </com.flavienlaurent.discrollview.lib.DiscrollViewContent>
+    </com.flavienlaurent.discrollview.lib.DiscrollView>

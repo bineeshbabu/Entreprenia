@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lin_lay3"
+    xmlns:discrollve="http://schemas.android.com/tools"
+    android:background="@drawable/kik">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.phacsin.entreprenia.customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/story3title"
+            android:layout_height="wrap_content"
+            android:text="@string/slide_3_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/slide_title"
+            android:textStyle="bold"
+            discrollve:discrollve_translation="fromBottom"/>
+        <com.phacsin.entreprenia.customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/story3subtitle"
+            android:layout_height="wrap_content"
+            android:text="@string/slide_3_subtitle"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/slide_subtitle"
+            android:textStyle="bold"
+            discrollve:discrollve_translation="fromRight"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/blue_button_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        android:background="@color/float_transparent"
+        android:elevation="5dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+            <com.phacsin.entreprenia.customfonts.MyTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:text="Prof. Kiron K R"
+                android:layout_alignParentTop="true"/>
+
+            <com.phacsin.entreprenia.customfonts.MyTextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Convener"
+                android:textSize="15dp"
+                android:layout_below="@+id/textView"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/call_contact"
+                android:paddingTop="10sp"
+                android:layout_below="@+id/textView2"
+                android:layout_height="wrap_content"
+                android:src="@drawable/call"/>
+            <com.phacsin.entreprenia.customfonts.MyTextView
+                android:id="@+id/contact_number"
+                android:layout_toRightOf="@+id/call_contact"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91 94963 29746"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mail_at"
+                android:paddingTop="10sp"
+                android:layout_below="@+id/call_contact"
+                android:src="@drawable/mail"/>
+            <com.phacsin.entreprenia.customfonts.MyTextView
+
+                android:id="@+id/contact_mail"
+                android:layout_toRightOf="@+id/mail_at"
+                android:layout_below="@+id/contact_number"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kiron@entreprenia.org"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view2"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@color/transparent"
+        android:layout_margin="5dp"
+        android:elevation="5dp"
+
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <com.phacsin.entreprenia.customfonts.MyTextView
+                android:id="@+id/febin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:text="Febin Jishal"
+                android:layout_alignParentTop="true"/>
+
+            <com.phacsin.entreprenia.customfonts.MyTextView
+                android:id="@+id/pani"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Student Coordinator"
+                android:textSize="15dp"
+                android:layout_below="@+id/febin"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/febin_contact"
+                android:paddingTop="10sp"
+                android:layout_below="@+id/pani"
+                android:layout_height="wrap_content"
+                android:src="@drawable/call"/>
+            <com.phacsin.entreprenia.customfonts.MyTextView
+                android:id="@+id/febin_number"
+                android:layout_toRightOf="@+id/febin_contact"
+                android:layout_below="@+id/pani"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91 89079 05554"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mail_febin"
+                android:paddingTop="10sp"
+                android:layout_below="@+id/febin_contact"
+                android:src="@drawable/mail"/>
+            <com.phacsin.entreprenia.customfonts.MyTextView
+                android:id="@+id/contact_febin"
+                android:layout_toRightOf="@+id/mail_febin"
+                android:layout_below="@+id/febin_number"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="febin@entreprenia.org"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view3"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@color/transparent"
+        android:elevation="5dp"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <com.phacsin.entreprenia.customfonts.MyTextView
+                android:id="@+id/hari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:text="Harikrishnan R"
+                android:layout_alignParentTop="true"/>
+
+            <com.phacsin.entreprenia.customfonts.MyTextView
+                android:id="@+id/pani1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Public Relation Officer"
+                android:textSize="15dp"
+                android:layout_below="@+id/hari"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/hari_contact"
+                android:paddingTop="10sp"
+                android:layout_below="@+id/pani1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/call"/>
+            <com.phacsin.entreprenia.customfonts.MyTextView
+                android:id="@+id/hari_number"
+                android:layout_toRightOf="@+id/hari_contact"
+                android:layout_below="@+id/pani1"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91 96058 71373"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mail_hari"
+                android:paddingTop="10sp"
+                android:layout_below="@+id/hari_contact"
+                android:src="@drawable/mail"/>
+            <com.phacsin.entreprenia.customfonts.MyTextView
+                android:id="@+id/contact_hari"
+                android:layout_toRightOf="@+id/mail_hari"
+                android:layout_below="@+id/hari_number"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hari@entreprenia.org"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</ScrollView>

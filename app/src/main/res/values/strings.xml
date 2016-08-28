@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Entreprenia</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_welcome">Entreprenia</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="talk_tab">TALKS</string>
+    <string name="compet_tab">COMPETITIONS</string>
+    <string name="workshop_tab">WORKSHOP</string>
+    <string name="panel_tab">PANEL DISCUSSION</string>
+
+    <string name="slide_1_title">Welcome to Entreprenia 16.</string>
+    <string name="slide_1_subtitle">Lets Startup !</string>
+
+
+    <string name="slide_2_title">Bulls and Bears</string>
+    <string name="slide_2_subtitle">No price is too low for a bear or \n too high for bull</string>
+
+    <string name="slide_3_title">KICKSTARTER</string>
+    <string name="slide_3_subtitle">Your Startupss</string>
+
+
+    <string name="slide_4_subtitle">Entreprenia is one of its Kind ENTREPRENEURSHIP Summit Held at NSS College of Engineering ,Palakkad ,Kerala. \n </string>
+    <string name="slide_4_subtitle2">\n We aim to develop the entrepreneurship spirit and culture in the people in our country by providing a platform for the startups to get nurtured into a company.</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Closed</string>
+
+
+
+
+</resources>
