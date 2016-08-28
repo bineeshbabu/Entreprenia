@@ -103,6 +103,40 @@
                 android:inputType="textCapWords"
                 android:hint="College Name" />
         </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <com.phacsin.entreprenia.customfonts.HelveticaEditText
+                android:id="@+id/input_cnum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Contact Number" />
+        </android.support.design.widget.TextInputLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_mat"
+            android:text="Male"
+            android:theme="@style/MyRadioButton"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_mat"
+            android:text="Female"
+            android:theme="@style/MyRadioButton"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35sp"
+                android:text="Accomodation"/>
+        </LinearLayout>
 
         <!-- Signup Button -->
         <android.support.v7.widget.AppCompatButton

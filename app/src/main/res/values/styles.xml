@@ -56,4 +56,13 @@
         <item name="android:layout_marginLeft">14dp</item>
         <item name="android:orientation">horizontal</item>
     </style>
+
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/violet</item>
+        <item name="colorControlActivated">@color/green</item>
+    </style>
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/violet</item>
+        <item name="colorControlActivated">@color/green</item>
+    </style>
 </resources>
