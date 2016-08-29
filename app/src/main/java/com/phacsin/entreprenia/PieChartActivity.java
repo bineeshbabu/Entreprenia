@@ -34,7 +34,7 @@ import java.util.ArrayList;
  */
 public class PieChartActivity extends DemoBase  implements OnChartValueSelectedListener {
     private PieChart mChart;
-    String[] mMonths = new String[] {"ENTREPRENIA", "SPEEKERS", "EVENTS", "REGISTER", "CONTACT US", "PARTNERS"};
+    String[] mMonths = new String[] {"ENTREPRENIA", "SPEAKERS", "EVENTS", "REGISTER", "CONTACT US", "PARTNERS"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
