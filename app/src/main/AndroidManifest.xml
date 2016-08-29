@@ -48,7 +48,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PieChartActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".GridActivity"
+        <activity android:name=".Profile"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.phacsin.entreprenia.Profile;
 import com.phacsin.entreprenia.R;
 
 import butterknife.ButterKnife;
@@ -71,6 +72,8 @@ public class LoginActivity extends AppCompatActivity {
         pDialog.setCancelable(false);
         pDialog.show();
 
+         Intent i= new Intent(getApplicationContext(), Profile.class);
+        startActivity(i);
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 

@@ -169,7 +169,7 @@ public class PieChartActivity extends DemoBase  implements OnChartValueSelectedL
                  Intent i= new Intent(getApplicationContext(),ContactUs.class);
                  startActivity(i);
              }else if(va.equals("16.15")){
-                 Intent i= new Intent(getApplicationContext(),GridActivity.class);
+                 Intent i= new Intent(getApplicationContext(),Partners.class);
                  startActivity(i);             }
 
          }

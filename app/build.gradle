@@ -41,5 +41,4 @@ repositories {
         compile 'com.github.flavienlaurent.discrollview:library:0.0.2@aar'
         compile 'com.yalantis:flipviewpager:1.0.0'
         compile 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1'
-        compile project(':dynamicgrid')
     }
