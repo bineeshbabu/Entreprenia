@@ -31,6 +31,7 @@
             android:layout_marginRight="30sp"
             android:inputType="textEmailAddress"
             android:textColor="@color/white"
+            android:id="@+id/input_email"
             android:textColorHint="@color/green"
             android:hint="Email" />
     </android.support.design.widget.TextInputLayout>
