@@ -13,7 +13,7 @@ import com.phacsin.entreprenia.main.ContactUs;
 import com.phacsin.entreprenia.main.Entreprenia;
 import com.phacsin.entreprenia.main.EventsActivity;
 import com.phacsin.entreprenia.main.partners.Partners;
-import com.phacsin.entreprenia.main.speeker.Speekers;
+import com.phacsin.entreprenia.main.speeker.Speakers;
 import com.phacsin.entreprenia.registration.SignupActivity;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity{
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(getApplicationContext(),Speekers.class);
+                Intent i= new Intent(getApplicationContext(),Speakers.class);
                 startActivity(i);
             }
         });

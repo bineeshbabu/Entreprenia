@@ -7,6 +7,7 @@ package com.phacsin.entreprenia.registration;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -15,7 +16,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.phacsin.entreprenia.Profile;
+import com.android.volley.NoConnectionError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.TimeoutError;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.phacsin.entreprenia.R;
 
 import butterknife.ButterKnife;
@@ -72,22 +81,55 @@ public class LoginActivity extends AppCompatActivity {
         pDialog.setCancelable(false);
         pDialog.show();
 
-         Intent i= new Intent(getApplicationContext(), Profile.class);
-        startActivity(i);
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 
-        // TODO: Implement your own authentication logic here.
+        String URL = "http://entreprenia.org/app/login.php?email="+email+"&password="+password;
+        StringRequest strReq = new StringRequest(Request.Method.GET,
+                URL, new Response.Listener<String>() {
 
-        new android.os.Handler().postDelayed(
-                new Runnable() {
-                    public void run() {
-                        // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
-                        // onLoginFailed();
-                        pDialog.dismiss();
-                    }
-                }, 3000);
+            @Override
+            public void onResponse(String response) {
+                Log.d(TAG, response.toString());
+                if(response.equals("Success")) {
+                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+                    pDialog.hide();
+                }
+                else
+                {
+                    pDialog.hide();
+                    _loginButton.setEnabled(true);
+                    Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d(TAG, "Error: " + error.getMessage());
+                pDialog.hide();
+                String errorMsg;
+                if(error instanceof NoConnectionError)
+                    errorMsg = "Network Error";
+                else if(error instanceof TimeoutError)
+                    errorMsg = "Timeout Error";
+                else
+                    errorMsg = "Unknown Error";
+                Snackbar.make(findViewById(android.R.id.content), errorMsg, Snackbar.LENGTH_LONG)
+                        .setAction("RETRY", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                login();
+                            }
+                        }).show();
+            }
+
+        });
+
+// Adding request to request queue
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(strReq);
     }
 
 

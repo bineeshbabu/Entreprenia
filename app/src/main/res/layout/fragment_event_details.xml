@@ -15,6 +15,7 @@
         android:minWidth="300dp"
         android:minHeight="400dp">
         <com.phacsin.entreprenia.customfonts.MyTextView
+            android:id="@+id/event_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="KICKSTARTER"
@@ -24,6 +25,7 @@
             android:textStyle="bold"/>
         <include layout="@layout/event_fragment_divider"/>
         <com.phacsin.entreprenia.customfonts.MyTextView
+            android:id="@+id/event_brief"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
@@ -48,6 +50,7 @@
             android:textSize="20dp"
             android:textColor="@color/grey"/>
         <com.phacsin.entreprenia.customfonts.MyTextView
+            android:id="@+id/speaker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="K K K M K"
@@ -56,6 +59,7 @@
         <include layout="@layout/event_fragment_divider_2"/>
 
         <com.phacsin.entreprenia.customfonts.MyTextView
+            android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey"
@@ -91,6 +95,7 @@
             android:textColor="@color/grey"
             android:paddingTop="10sp"
             android:text="Phone:"
+            android:id="@+id/phone"
             android:textSize="20dp"/>
         <com.phacsin.entreprenia.customfonts.MyTextView
             android:layout_width="wrap_content"
@@ -110,7 +115,7 @@
             android:padding="12dp"
             android:background="@drawable/corner_radius"
             android:text="Register"/>
-        <android.support.v7.widget.AppCompatButton
+         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_close"
             android:layout_width="50sp"
             android:layout_height="50sp"

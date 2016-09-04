@@ -28,6 +28,7 @@ repositories {
         testCompile 'junit:junit:4.12'
         compile 'com.android.support:appcompat-v7:23.3.0'
         compile 'com.android.support:design:23.3.0'
+        compile 'com.android.support:recyclerview-v7:23.1.1'
         compile 'com.jakewharton:butterknife:6.1.0'
         compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
         compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
@@ -41,4 +42,8 @@ repositories {
         compile 'com.github.flavienlaurent.discrollview:library:0.0.2@aar'
         compile 'com.yalantis:flipviewpager:1.0.0'
         compile 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1'
+        compile 'jp.wasabeef:blurry:2.0.2'
+        compile 'com.android.volley:volley:1.0.0'
+        compile 'com.squareup.picasso:picasso:2.5.2'
+        compile 'com.wang.avi:library:2.1.3'
     }

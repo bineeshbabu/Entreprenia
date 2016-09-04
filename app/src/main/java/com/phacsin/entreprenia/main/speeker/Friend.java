@@ -8,19 +8,19 @@ import java.util.List;
  * Created by Bineesh P Babu on 20-08-2016.
  */
 public class Friend {
-    private int avatar;
-    private String nickname;
+    private String avatar;
+    private String nickname,designation,event;
     private int background;
-    private List<String> interests = new ArrayList<>();
-
-    public Friend(int avatar, String nickname, int background, String... interest) {
+    public Friend(String avatar, String nickname, int background, String designation,String event) {
         this.avatar = avatar;
         this.nickname = nickname;
         this.background = background;
-        interests.addAll(Arrays.asList(interest));
+        this.designation = designation;
+        this.event = event;
+
     }
 
-    public int getAvatar() {
+    public String getAvatar() {
         return avatar;
     }
 
@@ -32,7 +32,11 @@ public class Friend {
         return background;
     }
 
-    public List<String> getInterests() {
-        return interests;
+    public String getDesignation() {
+        return designation;
+    }
+
+    public String getEvent() {
+        return event;
     }
 }

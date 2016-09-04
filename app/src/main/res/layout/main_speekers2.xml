@@ -15,16 +15,8 @@
         style="@style/LinearLayout.Interests">
 
         <com.phacsin.entreprenia.customfonts.MyTextView
-            style="@style/TextView.Interest"
-            android:id="@+id/interest_1" />
-
-        <com.phacsin.entreprenia.customfonts.MyTextView
-            style="@style/TextView.Interest"
-            android:id="@+id/interest_2" />
-
-        <com.phacsin.entreprenia.customfonts.MyTextView
-            style="@style/TextView.Interest"
-            android:id="@+id/interest_3" />
+            android:id="@+id/speaker_designation"
+            style="@style/TextView.Interest" />
     </LinearLayout>
 
 
@@ -35,12 +27,8 @@
         style="@style/LinearLayout.Interests">
 
         <com.phacsin.entreprenia.customfonts.MyTextView
-            android:id="@+id/interest_4"
-            style="@style/TextView.Interest" />
-
-        <com.phacsin.entreprenia.customfonts.MyTextView
-            android:id="@+id/interest_5"
-            style="@style/TextView.Interest" />
+            style="@style/TextView.Interest"
+            android:id="@+id/speaker_event" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.phacsin.entreprenia">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/entreprenia"
@@ -32,13 +32,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".main.EventsActivity"
+            android:parentActivityName=".MainActivity"
             android:label="Events"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".main.Entreprenia"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".main.speeker.Speekers"
+        <activity android:name=".main.speeker.Speakers"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".main.ContactUs"
@@ -47,8 +48,6 @@
         <activity android:name=".main.partners.Partners"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PieChartActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Profile"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

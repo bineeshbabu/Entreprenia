@@ -24,7 +24,7 @@ import com.phacsin.entreprenia.main.ContactUs;
 import com.phacsin.entreprenia.main.Entreprenia;
 import com.phacsin.entreprenia.main.EventsActivity;
 import com.phacsin.entreprenia.main.partners.Partners;
-import com.phacsin.entreprenia.main.speeker.Speekers;
+import com.phacsin.entreprenia.main.speeker.Speakers;
 import com.phacsin.entreprenia.registration.SignupActivity;
 
 import java.util.ArrayList;
@@ -157,7 +157,7 @@ public class PieChartActivity extends DemoBase  implements OnChartValueSelectedL
 
              }
              else if(va.equals("16.11")){
-                 Intent i= new Intent(getApplicationContext(),Speekers.class);
+                 Intent i= new Intent(getApplicationContext(),Speakers.class);
                  startActivity(i);             }
              else if(va.equals("16.12")){
                  Intent i= new Intent(getApplicationContext(),EventsActivity.class);

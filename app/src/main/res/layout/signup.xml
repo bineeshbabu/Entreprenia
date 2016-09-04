@@ -10,6 +10,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/rootView"
         android:paddingTop="56dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
@@ -120,18 +121,21 @@
             android:layout_height="wrap_content">
 
         <RadioButton
+            android:id="@+id/male_radio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black_mat"
             android:text="Male"
             android:theme="@style/MyRadioButton"/>
         <RadioButton
+            android:id="@+id/female_radio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black_mat"
             android:text="Female"
             android:theme="@style/MyRadioButton"/>
             <CheckBox
+                android:id="@+id/accomodation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="35sp"
