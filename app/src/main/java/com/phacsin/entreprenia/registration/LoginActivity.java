@@ -4,7 +4,9 @@ package com.phacsin.entreprenia.registration;
  * Created by Bineesh P Babu on 04-07-2016.
  */
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -40,12 +42,13 @@ public class LoginActivity extends AppCompatActivity {
     @InjectView(R.id.input_password) EditText _passwordText;
     @InjectView(R.id.btn_login) Button _loginButton;
     @InjectView(R.id.link_signup) TextView _signupLink;
-
+    SharedPreferences sharedPreferences;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_registration_login);
         ButterKnife.inject(this);
+        sharedPreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE);
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
@@ -94,6 +97,9 @@ public class LoginActivity extends AppCompatActivity {
                 Log.d(TAG, response.toString());
                 if(response.equals("Success")) {
                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("email", _emailText.getText().toString());
+                    editor.commit();
                     startActivity(new Intent(getApplicationContext(),Profile.class));
                     pDialog.hide();
                 }

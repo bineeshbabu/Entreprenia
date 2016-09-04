@@ -13,5 +13,4 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.main_profile);
 
     }
-
 }

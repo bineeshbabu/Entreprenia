@@ -18,10 +18,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_welcome"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".splash.SplashScreen"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -32,7 +28,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".main.EventsActivity"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".PieChartActivity"
             android:label="Events"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -47,7 +43,7 @@
 
         <activity android:name=".main.partners.Partners"
             android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".PieChartActivity"
             />
         <activity android:name=".PieChartActivity"
             android:theme="@style/AppTheme.NoActionBar" />

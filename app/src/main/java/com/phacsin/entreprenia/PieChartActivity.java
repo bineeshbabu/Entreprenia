@@ -1,6 +1,8 @@
 package com.phacsin.entreprenia;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -35,14 +37,14 @@ import java.util.ArrayList;
 public class PieChartActivity extends DemoBase  implements OnChartValueSelectedListener {
     private PieChart mChart;
     String[] mMonths = new String[] {"ENTREPRENIA", "SPEAKERS", "EVENTS", "REGISTER", "CONTACT US", "PARTNERS"};
-
+    SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_piechart);
-
+        sharedPreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE);
 
         mChart = (PieChart) findViewById(R.id.chart1);
 
@@ -101,7 +103,10 @@ public class PieChartActivity extends DemoBase  implements OnChartValueSelectedL
             entries.add(new PieEntry((float) 16.10,"ENTREPRENIA"));
             entries.add(new PieEntry((float) 16.11,"SPEEKERS"));
             entries.add(new PieEntry((float) 16.12,"EVENTS"));
-            entries.add(new PieEntry((float) 16.13,"REGISTER"));
+            if(sharedPreferences.getString("email","").equals(""))
+                entries.add(new PieEntry((float) 16.13,"REGISTER"));
+            else
+                entries.add(new PieEntry((float) 16.13,"PROFILE"));
             entries.add(new PieEntry((float) 16.14,"CONTACT"));
             entries.add(new PieEntry((float) 16.15,"PARTNERS"));
 
@@ -163,8 +168,15 @@ public class PieChartActivity extends DemoBase  implements OnChartValueSelectedL
                  Intent i= new Intent(getApplicationContext(),EventsActivity.class);
                  startActivity(i);
              }else if(va.equals("16.13")){
-                 Intent i= new Intent(getApplicationContext(),SignupActivity.class);
-                 startActivity(i);
+                 if(sharedPreferences.getString("email","").equals("")){
+                     Intent i = new Intent(getApplicationContext(), SignupActivity.class);
+                     startActivity(i);
+                 }
+                 else
+                 {
+                     Intent i = new Intent(getApplicationContext(), Profile.class);
+                     startActivity(i);
+                 }
              }else if(va.equals("16.14")){
                  Intent i= new Intent(getApplicationContext(),ContactUs.class);
                  startActivity(i);

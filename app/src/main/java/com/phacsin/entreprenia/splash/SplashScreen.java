@@ -10,7 +10,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.phacsin.entreprenia.MainActivity;
 import com.phacsin.entreprenia.PieChartActivity;
 import com.phacsin.entreprenia.R;
 
