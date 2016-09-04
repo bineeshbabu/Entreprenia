@@ -19,32 +19,32 @@
                 android:gravity="center"
                 android:text="Do you know Entreprenia 15?" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="@color/blue"
-                discrollve:discrollve_alpha="true"
-                discrollve:discrollve_threshold="0.3" />
+            <!--   <View
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/blue"
+                    discrollve:discrollve_alpha="true"
+                    discrollve:discrollve_threshold="0.3" />  -->
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                discrollve:discrollve_alpha="true"
-                discrollve:discrollve_translation="fromLeft"
-                android:src="@drawable/ent" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:background="@color/green"
-                discrollve:discrollve_alpha="true"
-                discrollve:discrollve_threshold="0.3" />
-<!--
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="110dp"
-                android:layout_gravity="center"
-                android:src="@drawable/i2p_1"
-                discrollve:discrollve_translation="fromBottom" />-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    discrollve:discrollve_alpha="true"
+                    discrollve:discrollve_translation="fromLeft"
+                    android:src="@drawable/ent" />
+            <!--     <View
+                     android:layout_width="match_parent"
+                     android:layout_height="300dp"
+                     android:background="@color/green"
+                     discrollve:discrollve_alpha="true"
+                     discrollve:discrollve_threshold="0.3" />  -->
+     <!--
+                 <ImageView
+                     android:layout_width="250dp"
+                     android:layout_height="110dp"
+                     android:layout_gravity="center"
+                     android:src="@drawable/i2p_1"
+                     discrollve:discrollve_translation="fromBottom" />-->
           <!--  <View
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -68,7 +68,7 @@
                 android:text="For the first time in South India,an Engineering College organised such a summit. The summit was packed with competitions, talks, workshops, panel discussions and kickstarter.It was a 2 day Summit hosted in NSS College of Engineering, Palakkad at September 19,20 2015 by the IEDC Cell, NSSCE in association with District Industries Centre, Palakkad, Kerala."
                 android:textSize="18sp"
                 discrollve:discrollve_alpha="true"
-                discrollve:discrollve_translation="fromRight" />
+                discrollve:discrollve_translation="fromBottom" />
 
             <include layout="@layout/event_fragment_divider"/>
 

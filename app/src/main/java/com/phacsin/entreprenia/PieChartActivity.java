@@ -101,7 +101,7 @@ public class PieChartActivity extends DemoBase  implements OnChartValueSelectedL
         // the chart.
 
             entries.add(new PieEntry((float) 16.10,"ENTREPRENIA"));
-            entries.add(new PieEntry((float) 16.11,"SPEEKERS"));
+            entries.add(new PieEntry((float) 16.11,"SPEAKERS"));
             entries.add(new PieEntry((float) 16.12,"EVENTS"));
             if(sharedPreferences.getString("email","").equals(""))
                 entries.add(new PieEntry((float) 16.13,"REGISTER"));

@@ -125,6 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black_mat"
+            android:layout_marginTop="5dp"
             android:text="Male"
             android:theme="@style/MyRadioButton"/>
         <RadioButton
@@ -132,13 +133,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black_mat"
+            android:layout_marginTop="5dp"
             android:text="Female"
             android:theme="@style/MyRadioButton"/>
             <CheckBox
                 android:id="@+id/accomodation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35sp"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="5dp"
                 android:text="Accomodation"/>
         </LinearLayout>
 
@@ -158,7 +161,7 @@
             android:id="@+id/link_login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="40dp"
             android:textColor="@color/white"
             android:text="Already a member? Login"
             android:gravity="center"
