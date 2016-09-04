@@ -129,8 +129,6 @@
             android:text="8590332334"
             android:textSize="13sp"
             />
-
-
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
