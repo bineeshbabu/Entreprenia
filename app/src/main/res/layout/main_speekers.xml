@@ -3,14 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="200sp"
     android:weightSum="2"
-    android:background="@android:color/background_light"
+    android:background="@color/blue"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
         android:id="@+id/first"
+        android:layout_marginLeft="3sp"
+        android:layout_marginTop="3dp"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="0dp"
         android:layout_weight="1"
+        android:src="@drawable/ent"
         android:contentDescription="left image"
         android:layout_height="wrap_content"
         android:scaleType="fitXY" />
@@ -25,6 +28,9 @@
         android:id="@+id/second"
         android:layout_width="0dp"
         android:layout_weight="1"
+        android:layout_marginRight="3sp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/ent"
         android:contentDescription="right image"
         android:layout_height="wrap_content"
         android:scaleType="fitXY" />
