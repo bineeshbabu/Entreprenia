@@ -17,6 +17,7 @@
         app:siShape="@drawable/shape_rounded_rectangle"
         android:src="@drawable/ent"
         app:siSquare="true"/>
+
     <com.phacsin.entreprenia.customfonts.Helvetica
         android:layout_width="wrap_content"
         android:id="@+id/story1title"

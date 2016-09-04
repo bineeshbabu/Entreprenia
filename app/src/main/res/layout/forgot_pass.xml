@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue">
+
+    <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+        android:layout_width="70sp"
+        android:elevation="10sp"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/for_pass"
+        android:layout_marginBottom="30sp"
+        android:id="@+id/splash"
+        android:layout_height="70sp"
+        app:siShape="@drawable/shape_rounded_rectangle"
+        android:src="@drawable/ent"
+        app:siSquare="true"/>
+    <!-- Email Label -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/for_pass"
+        android:layout_marginLeft="10sp"
+        android:layout_centerInParent="true">
+
+        <com.phacsin.entreprenia.customfonts.HelveticaEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/green"
+            android:hint="Email" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/forgot_button"
+        android:layout_below="@+id/for_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="15sp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/blue"
+        android:background="@drawable/corner_radius"
+        android:text="Verify By Email"/>
+
+</RelativeLayout>
