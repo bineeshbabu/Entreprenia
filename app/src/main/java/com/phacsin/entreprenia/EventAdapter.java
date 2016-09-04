@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,6 +30,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
         TextView title,dialog_title;
         ImageView imageView;
         MyTextView details;
+        Button button;
 
         public MyViewHolder(View view) {
             super(view);
@@ -42,11 +44,18 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
                     View view=inflater.inflate(R.layout.fragment_event_details,null);
                     details = (MyTextView) view.findViewById(R.id.event_brief);
                     dialog_title = (TextView) view.findViewById(R.id.event_title);
+                    button = (Button) view.findViewById(R.id.btn_close);
                     details.setText(event.brief);
                     dialog_title.setText(event.name);
-                    MaterialDialog mMaterialDialog = new MaterialDialog(context);
+                    final MaterialDialog mMaterialDialog = new MaterialDialog(context);
                     mMaterialDialog.setContentView(view);
                     mMaterialDialog.setCanceledOnTouchOutside(true);
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            mMaterialDialog.dismiss();
+                        }
+                    });
                     mMaterialDialog.show();
                 }
             });

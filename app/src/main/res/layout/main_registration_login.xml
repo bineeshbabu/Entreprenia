@@ -69,7 +69,7 @@
             android:id="@+id/link_forgot"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
+            android:layout_marginTop="20sp"
             android:text="Forgot Password ?"
             android:layout_marginBottom="24dp"
             android:textColor="@color/white"
