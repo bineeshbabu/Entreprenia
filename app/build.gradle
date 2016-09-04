@@ -28,7 +28,6 @@ repositories {
         testCompile 'junit:junit:4.12'
         compile 'com.android.support:appcompat-v7:23.3.0'
         compile 'com.android.support:design:23.3.0'
-        compile 'com.android.support:recyclerview-v7:23.1.1'
         compile 'com.jakewharton:butterknife:6.1.0'
         compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
         compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
