@@ -25,6 +25,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.phacsin.entreprenia.Profile;
 import com.phacsin.entreprenia.R;
 
 import butterknife.ButterKnife;
@@ -93,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
                 Log.d(TAG, response.toString());
                 if(response.equals("Success")) {
                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(),Profile.class));
                     pDialog.hide();
                 }
                 else

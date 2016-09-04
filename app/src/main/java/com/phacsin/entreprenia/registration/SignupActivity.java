@@ -4,7 +4,9 @@ package com.phacsin.entreprenia.registration;
  * Created by Bineesh P Babu on 04-07-2016.
  */
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -48,12 +50,13 @@ public class SignupActivity extends AppCompatActivity {
     @InjectView(R.id.input_cnum) EditText phone;
     @InjectView(R.id.accomodation) CheckBox accomodation;
     @InjectView(R.id.female_radio) RadioButton female;
-
+    SharedPreferences sharedpreferences;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
         ButterKnife.inject(this);
+        sharedpreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         _signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -158,6 +161,9 @@ public class SignupActivity extends AppCompatActivity {
                 .setTitleText("Good job")
                 .setContentText("You are Registered")
                 .show();
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putString("email", _emailText.getText().toString());
+        editor.commit();
         _signupButton.setEnabled(true);
         setResult(RESULT_OK, null);
         finish();

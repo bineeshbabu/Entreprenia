@@ -46,8 +46,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".main.partners.Partners"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity"
+            />
         <activity android:name=".PieChartActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".Profile"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
