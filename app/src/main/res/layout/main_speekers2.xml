@@ -7,13 +7,12 @@
 
     <com.phacsin.entreprenia.customfonts.MyTextView
         style="@style/TextView.Nickname"
-        android:id="@+id/nickname" />
+        android:id="@+id/nickname"/>
 
     <LinearLayout
         android:layout_below="@+id/nickname"
         android:id="@+id/interestsPrimary"
         style="@style/LinearLayout.Interests">
-
         <com.phacsin.entreprenia.customfonts.MyTextView
             android:id="@+id/speaker_designation"
             style="@style/TextView.Interest" />
@@ -23,7 +22,7 @@
     <LinearLayout
         android:layout_below="@+id/interestsPrimary"
         android:id="@+id/interestsSecondary"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         style="@style/LinearLayout.Interests">
 
         <com.phacsin.entreprenia.customfonts.MyTextView
