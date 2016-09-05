@@ -53,7 +53,7 @@
         <activity android:name=".registration.ForgotPassword"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Alacarte"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/DarkTheme" />
     </application>
 
 </manifest>

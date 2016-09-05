@@ -80,4 +80,10 @@
         <item name="colorControlNormal">@color/violet</item>
         <item name="colorControlActivated">@color/green</item>
     </style>
+
+    <style name="DarkCheckbox" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/violet</item>
+        <item name="colorControlActivated">@color/green</item>
+    </style>
+
 </resources>

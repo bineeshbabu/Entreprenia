@@ -3,6 +3,7 @@ package com.phacsin.entreprenia;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -53,9 +54,13 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_profile);
-        final CarouselLayoutManager layoutManager = new CarouselLayoutManager(CarouselLayoutManager.VERTICAL);
+        final CarouselLayoutManager layoutManager;
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.packageList);
         recyclerView.addOnScrollListener(new CenterScrollListener());
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
+            layoutManager =  new CarouselLayoutManager(CarouselLayoutManager.VERTICAL);
+        else
+            layoutManager =  new CarouselLayoutManager(CarouselLayoutManager.HORIZONTAL);
         layoutManager.setPostLayoutListener(new CarouselZoomPostLayoutListener());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
