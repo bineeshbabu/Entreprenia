@@ -1,18 +1,49 @@
 package com.phacsin.entreprenia;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.NoConnectionError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.TimeoutError;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.azoft.carousellayoutmanager.CarouselLayoutManager;
 import com.azoft.carousellayoutmanager.CarouselZoomPostLayoutListener;
 import com.azoft.carousellayoutmanager.CenterScrollListener;
+import com.squareup.picasso.Picasso;
+
+import org.json.JSONObject;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 /**
  * Created by Bineesh P Babu on 29-08-2016.
  */
 public class Profile extends AppCompatActivity {
+    @InjectView(R.id.user_profile_id) TextView  uid;
+    @InjectView(R.id.user_email) TextView  email_text;
+    @InjectView(R.id.header_cover_image) ImageView qr_code;
+    SharedPreferences sharedPreferences;
+    String email;
+
     int layoutList[] = {R.layout.card_basic,R.layout.card_ecocnomy,R.layout.card_business,R.layout.card_iedc,R.layout.card_nss,R.layout.card_exe};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,5 +57,58 @@ public class Profile extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         PackageAdapter adapter = new PackageAdapter(layoutList);
         recyclerView.setAdapter(adapter);
+        ButterKnife.inject(this);
+        sharedPreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+        email = sharedPreferences.getString("email","");
+        email_text.setText(email);
+
+        loadUUID();
+    }
+
+    private void loadUUID() {
+        String URL = "http://entreprenia.org/app/uuid_fetch.php?email="+email;
+        //String QR_URL =
+        if(sharedPreferences.contains("uid")) {
+            JsonObjectRequest strReq = new JsonObjectRequest(Request.Method.GET,
+                    URL, null, new Response.Listener<JSONObject>() {
+
+                @Override
+                public void onResponse(JSONObject response) {
+                    Log.d("Response", response.toString());
+                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("uid", response.optString("uuid"));
+                    editor.commit();
+                    uid.setText(response.optString("uuid"));
+
+                }
+            }, new Response.ErrorListener() {
+
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    VolleyLog.d("Volley Error", "Error: " + error.getMessage());
+                    String errorMsg;
+                    if (error instanceof NoConnectionError)
+                        errorMsg = "Network Error";
+                    else if (error instanceof TimeoutError)
+                        errorMsg = "Timeout Error";
+                    else
+                        errorMsg = "Unknown Error";
+                    Snackbar.make(findViewById(android.R.id.content), errorMsg, Snackbar.LENGTH_LONG)
+                            .setAction("RETRY", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    loadUUID();
+                                }
+                            }).show();
+                }
+
+            });
+
+            RequestQueue requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(strReq);
+        }
+        /*else
+            Picasso.with(getApplicationContext()).load().into(qr_code);*/
     }
 }
