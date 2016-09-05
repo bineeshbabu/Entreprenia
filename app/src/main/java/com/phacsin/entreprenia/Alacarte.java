@@ -22,14 +22,15 @@ import com.diegocarloslima.fgelv.lib.WrapperExpandableListAdapter;
  * Created by Bineesh P Babu on 05-09-2016.
  */
 public class Alacarte extends Activity {
-
+    FloatingGroupExpandableListView list;
+    String events[][];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.sample_activity);
 
-        final FloatingGroupExpandableListView list = (FloatingGroupExpandableListView) findViewById(R.id.sample_activity_list);
+        list  = (FloatingGroupExpandableListView) findViewById(R.id.sample_activity_list);
 
         final LayoutInflater inflater = getLayoutInflater();
 
@@ -46,11 +47,17 @@ public class Alacarte extends Activity {
             }
         });
 
-        // Even though the child divider has already been set on the layout file, we have to set it again here
-        // This prevents a bug where the background turns to the color of the child divider when the list is expanded
         list.setChildDivider(new ColorDrawable(Color.BLACK));
+        loadEvents();
+        showDropdownList();
+}
 
-        final SampleAdapter adapter = new SampleAdapter(this);
+    private void loadEvents() {
+
+    }
+
+    private void showDropdownList() {
+        final SampleAdapter adapter = new SampleAdapter(this,events);
         final WrapperExpandableListAdapter wrapperAdapter = new WrapperExpandableListAdapter(adapter);
         list.setAdapter(wrapperAdapter);
 
@@ -94,4 +101,4 @@ public class Alacarte extends Activity {
             }
         });
     }
-}
+    }

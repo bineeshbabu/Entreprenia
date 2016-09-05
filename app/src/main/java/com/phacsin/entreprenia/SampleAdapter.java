@@ -23,22 +23,11 @@ public class SampleAdapter  extends BaseExpandableListAdapter {
             "Panel Discussions"
     };
 
-    private final int[] mGroupDrawables = {
-            R.drawable.call,
-            R.drawable.call,
-            R.drawable.call,
-            R.drawable.call
-    };
+    private final String[][] mChilds;
 
-    private final String[][] mChilds = {
-            {"Rise OF The  Phoenix","Failure Stories","Motivate","Investing Wisely","Entrepreneurship in IOT"},
-            {"On Your Marks","Hire The Best","Lean Startup","Binary Marketing","Creative Thinking"},
-            {"Bulls and Bears","Corporate Roadies","Idea To Product","Best E-cell","Clash Of Corporates","Kickstarter","Bplan","Best Critic"},
-            {"Entrepreneurship In Non IT Sector","Pitch Perfect"}
-    };
-
-    public SampleAdapter(Context context) {
+    public SampleAdapter(Context context,String[][] mChilds) {
         mContext = context;
+        this.mChilds = mChilds;
         mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
