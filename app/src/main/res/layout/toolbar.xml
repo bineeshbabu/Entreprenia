@@ -10,5 +10,4 @@
     android:background="@color/bg_screen1"
     android:clipToPadding="false"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    tools:context=".MainActivity"/>
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>

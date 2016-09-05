@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -40,9 +41,12 @@ import butterknife.InjectView;
 public class Profile extends AppCompatActivity {
     @InjectView(R.id.user_profile_id) TextView  uid;
     @InjectView(R.id.user_email) TextView  email_text;
-    @InjectView(R.id.header_cover_image) ImageView qr_code;
+    @InjectView(R.id.user_profile_photo) ImageView qr_code;
+
     SharedPreferences sharedPreferences;
     String email;
+    String QR_URL;
+
 
     int layoutList[] = {R.layout.card_basic,R.layout.card_ecocnomy,R.layout.card_business,R.layout.card_iedc,R.layout.card_nss,R.layout.card_exe};
     @Override
@@ -61,14 +65,12 @@ public class Profile extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         email = sharedPreferences.getString("email","");
         email_text.setText(email);
-
         loadUUID();
     }
 
     private void loadUUID() {
         String URL = "http://entreprenia.org/app/uuid_fetch.php?email="+email;
-        //String QR_URL =
-        if(sharedPreferences.contains("uid")) {
+        if(!sharedPreferences.contains("uid")) {
             JsonObjectRequest strReq = new JsonObjectRequest(Request.Method.GET,
                     URL, null, new Response.Listener<JSONObject>() {
 
@@ -76,11 +78,12 @@ public class Profile extends AppCompatActivity {
                 public void onResponse(JSONObject response) {
                     Log.d("Response", response.toString());
                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+                    QR_URL = "https://chart.googleapis.com/chart?cht=qr&chl="+response.optString("uuid")+"&choe=UTF-8&chs=500x500";
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("uid", response.optString("uuid"));
                     editor.commit();
                     uid.setText(response.optString("uuid"));
-
+                    Picasso.with(getApplicationContext()).load(QR_URL).into(qr_code);
                 }
             }, new Response.ErrorListener() {
 
@@ -108,7 +111,10 @@ public class Profile extends AppCompatActivity {
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             requestQueue.add(strReq);
         }
-        /*else
-            Picasso.with(getApplicationContext()).load().into(qr_code);*/
+        else {
+            String id = sharedPreferences.getString("uid","");
+            QR_URL = "https://chart.googleapis.com/chart?cht=qr&chl="+id+"&choe=UTF-8&chs=500x500";
+            Picasso.with(getApplicationContext()).load(QR_URL).into(qr_code);
+        }
     }
 }

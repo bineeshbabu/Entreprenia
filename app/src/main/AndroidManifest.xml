@@ -49,7 +49,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".Profile"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/DarkTheme" />
         <activity android:name=".registration.ForgotPassword"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
