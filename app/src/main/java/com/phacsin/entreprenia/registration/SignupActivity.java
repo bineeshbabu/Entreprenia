@@ -11,8 +11,12 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -28,9 +32,17 @@ import com.android.volley.Response;
 import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.phacsin.entreprenia.R;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -41,7 +53,7 @@ public class SignupActivity extends AppCompatActivity {
 
     @InjectView(R.id.input_fname) EditText fname;
     @InjectView(R.id.input_lname) EditText lname;
-    @InjectView(R.id.input_cname) EditText college;
+    @InjectView(R.id.input_cname) AutoCompleteTextView college;
     @InjectView(R.id.input_email) EditText _emailText;
     @InjectView(R.id.input_password) EditText _passwordText;
     @InjectView(R.id.btn_signup) Button _signupButton;
@@ -51,6 +63,7 @@ public class SignupActivity extends AppCompatActivity {
     @InjectView(R.id.accomodation) CheckBox accomodation;
     @InjectView(R.id.female_radio) RadioButton female;
     SharedPreferences sharedpreferences;
+    List<String> colleges = new ArrayList<>();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +97,58 @@ public class SignupActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        college.setThreshold(2);
+        college.setDropDownBackgroundResource(R.color.black);
+        college.addTextChangedListener(new TextWatcher() {
+                                           @Override
+                                           public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                                           }
+
+                                           @Override
+                                           public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                               loadResults(s);
+                                           }
+
+                                           @Override
+                                           public void afterTextChanged(Editable s) {
+
+                                           }
+                                       }
+        );
+    }
+
+    private void loadResults(CharSequence s) {
+        String URL = "http://entreprenia.org/app/fetch_college.php?text=" + s;
+        JsonArrayRequest strReq = new JsonArrayRequest(Request.Method.GET,
+                URL, null, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                try {
+                    colleges.clear();
+                    for (int i = 0; i < response.length(); i++) {
+                        JSONObject json = response.getJSONObject(i);
+                        colleges.add(json.getString("institute_name"));
+                    }
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),R.layout.custom_layout_college,colleges);
+                    college.setAdapter(adapter);
+                } catch (JSONException e) {
+
+                }
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d("vError", "Error: " + error.getMessage());
+            }
+
+        });
+
+// Adding request to request queue
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        requestQueue.add(strReq);
+
     }
 
     public void signup() {
