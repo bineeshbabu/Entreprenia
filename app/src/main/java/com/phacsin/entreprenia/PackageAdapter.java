@@ -32,6 +32,7 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageAdapter.MyViewHo
 
     private final View rootView;
     private final Activity activity;
+    private final String package_name;
     private int[] layoutList;
     Context context;
     SweetAlertDialog sDialog;
@@ -73,7 +74,9 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageAdapter.MyViewHo
                 view.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        activity.startActivity(new Intent(context, Alacarte.class));
+                        Intent intent = new Intent(activity,RegisterEvents.class);
+                        intent.putExtra("package_name",package_name);
+                        activity.startActivity(intent);
                     }
                 });
             }
@@ -131,11 +134,12 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageAdapter.MyViewHo
     }
 
 
-    public PackageAdapter(int [] layoutList, Context context, View rootView, Activity activity) {
+    public PackageAdapter(int [] layoutList, Context context, View rootView, Activity activity,String package_name) {
         this.layoutList = layoutList;
         this.context=context;
         this.rootView=rootView;
         this.activity=activity;
+        this.package_name=package_name;
     }
 
     @Override

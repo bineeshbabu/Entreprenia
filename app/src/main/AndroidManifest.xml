@@ -22,9 +22,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".registration.LoginActivity"
+            android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".registration.SignupActivity"
+            android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".main.EventsActivity"
@@ -49,11 +51,12 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".Profile"
-            android:theme="@style/DarkTheme" />
+            android:theme="@style/DarkTheme"
+            android:noHistory="true"/>
         <activity android:name=".registration.ForgotPassword"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Alacarte"
-            android:theme="@style/DarkTheme" />
+        <activity android:name=".RegisterEvents"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

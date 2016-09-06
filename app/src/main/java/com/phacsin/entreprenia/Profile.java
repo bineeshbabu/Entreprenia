@@ -72,6 +72,8 @@ public class Profile extends AppCompatActivity {
         /*SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.remove("package_id");
         editor.commit();*/
+        email = sharedPreferences.getString("email","");
+        email_text.setText(email);
         if(!sharedPreferences.contains("package_id"))
         {
             notSelectedPackage();
@@ -81,17 +83,17 @@ public class Profile extends AppCompatActivity {
             int package_id = sharedPreferences.getInt("package_id",0);
             int Package_sel[] = new int[1];
             Package_sel[0]=layoutList[package_id];
-            PackageAdapter adapter = new PackageAdapter(Package_sel,getApplicationContext(),rootView,Profile.this);
+            package_text.setText("Selected Package");
+            PackageAdapter adapter = new PackageAdapter(Package_sel,getApplicationContext(),rootView,Profile.this,"Package");
             recyclerView.setAdapter(adapter);
         }
-        email = sharedPreferences.getString("email","");
-        email_text.setText(email);
         loadUUID();
 
     }
 
     private void notSelectedPackage() {
         String URL = "http://entreprenia.org/app/package_return.php?email="+email;
+        Log.d("url",URL);
         JsonObjectRequest strReq = new JsonObjectRequest(Request.Method.GET,
                 URL,null, new Response.Listener<JSONObject>() {
 
@@ -109,7 +111,7 @@ public class Profile extends AppCompatActivity {
                 }
                 else
                 {
-                    PackageAdapter adapter = new PackageAdapter(layoutList, getApplicationContext(), rootView, Profile.this);
+                    PackageAdapter adapter = new PackageAdapter(layoutList, getApplicationContext(), rootView, Profile.this,"Package");
                     recyclerView.setAdapter(adapter);
                 }
 
@@ -143,10 +145,6 @@ public class Profile extends AppCompatActivity {
         requestQueue.add(strReq);
     }
 
-    private void loadPackage()
-    {
-
-    }
 
     private void loadUUID() {
         String URL = "http://entreprenia.org/app/uuid_fetch.php?email="+email;

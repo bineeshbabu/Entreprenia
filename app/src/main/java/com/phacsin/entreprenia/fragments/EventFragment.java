@@ -88,13 +88,18 @@ public class EventFragment extends android.support.v4.app.Fragment {
                         event.name = json.getString("event_name");
                         event.image = "http://entreprenia.org/img/events_app/" + json.getString("event_image");
                         event.brief = json.getString("event_short");
+                        event.rules = json.getString("rule1");
+                        event.date = json.getString("date");
+                        event.phone = json.getString("phone");
+                        event.coordinator = json.getString("coordinator");
+                        event.speaker = json.getString("speaker");
                         eventList.add(event);
                     }
                     Adapter = new EventAdapter(eventList,getActivity());
                     recyclerView.setAdapter(Adapter);
                 }catch (JSONException e)
                 {
-                    Log.d("json_error", response.toString());
+                    Log.d("json_error", e.toString());
                 }
             }
         }, new Response.ErrorListener() {

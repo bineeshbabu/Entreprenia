@@ -7,6 +7,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +28,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
     private List<Events> eventsList;
     Context context;
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView title,dialog_title;
+        TextView title,dialog_title,speaker,rules,date,coordinator,phone;
         ImageView imageView;
         MyTextView details;
         Button button;
@@ -44,9 +45,20 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
                     View view=inflater.inflate(R.layout.fragment_event_details,null);
                     details = (MyTextView) view.findViewById(R.id.event_brief);
                     dialog_title = (TextView) view.findViewById(R.id.event_title);
+                    speaker = (MyTextView) view.findViewById(R.id.speaker);
+                    coordinator = (MyTextView) view.findViewById(R.id.coordinator);
+                    rules = (MyTextView) view.findViewById(R.id.event_rules);
+                    date = (MyTextView) view.findViewById(R.id.date);
+                    phone = (MyTextView) view.findViewById(R.id.phone);
                     button = (Button) view.findViewById(R.id.btn_close);
                     details.setText(event.brief);
                     dialog_title.setText(event.name);
+                    coordinator.setText(event.coordinator);
+                    rules.setText(event.rules);
+                    date.setText(event.date);
+                    speaker.setText(event.speaker);
+                    phone.setText(event.phone);
+
                     final MaterialDialog mMaterialDialog = new MaterialDialog(context);
                     mMaterialDialog.setContentView(view);
                     mMaterialDialog.setCanceledOnTouchOutside(true);

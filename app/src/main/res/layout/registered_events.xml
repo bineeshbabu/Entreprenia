@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/package_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IEDC Package"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:textColor="@color/blue"/>
+        </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/eventList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <ImageView
+            android:layout_width="15sp"
+            android:layout_height="15sp"
+            android:src="@mipmap/entreprenia"
+            android:layout_toLeftOf="@+id/more_detail"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/more_detail"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="For More Details"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="moreHelp"
+            android:textColor="@color/blue" />
+
+    </RelativeLayout>
+</LinearLayout>

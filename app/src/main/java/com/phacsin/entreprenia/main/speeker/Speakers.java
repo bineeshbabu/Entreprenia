@@ -183,10 +183,15 @@ public class Speakers extends AppCompatActivity {
 
                         }
                     };
-                    Log.d("urls",((Friend) friend1).getAvatar() + "\n" + ((Friend) friend2).getAvatar());
-                    Picasso.with(context).load(((Friend) friend1).getAvatar()).into(left_target);
-                    if (friend2 != null)
-                        Picasso.with(context).load(((Friend) friend2).getAvatar()).into(right_target);
+                    try {
+                        Log.d("urls", ((Friend) friend1).getAvatar() + "\n" + ((Friend) friend2).getAvatar());
+                        Picasso.with(context).load(((Friend) friend1).getAvatar()).into(left_target);
+                        if (friend2 != null)
+                            Picasso.with(context).load(((Friend) friend2).getAvatar()).into(right_target);
+                    }catch (NullPointerException e)
+                    {
+
+                    }
                     break;
                 default:
                     fillHolder(holder, position == 0 ? (Friend) friend1 : (Friend) friend2);

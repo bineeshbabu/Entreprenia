@@ -47,7 +47,6 @@
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="10sp"
                 android:layout_height="wrap_content"
-                android:text="K K K M K"
                 android:textColor="@color/red"
                 android:textSize="18sp"
                 />
@@ -68,9 +67,7 @@
             android:layout_height="wrap_content"
             android:textSize="15dp"
             android:layout_marginTop="5sp"
-            android:textColor="@color/grey"
-            android:text="Dreamt of being your own architect,engineer,master technocrat,the human equivalent of a fighter jet?..Above all,as an economic titan who has done business with d behemoth heads of microsoft,fb,google??Then this must be your first step ......Here is a chance to showcase your product...Angel funders are here to explore the treasure in you..."/>
-
+            android:textColor="@color/grey"/>
 
         <com.phacsin.entreprenia.customfonts.MyTextView
             android:layout_width="wrap_content"
@@ -87,7 +84,6 @@
 
 
         <com.phacsin.entreprenia.customfonts.MyTextView
-            android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey"
@@ -99,6 +95,7 @@
             android:layout_height="wrap_content"
             android:text="25/09/2016"
             android:textSize="13sp"
+            android:id="@+id/date"
             />
 
         <com.phacsin.entreprenia.customfonts.MyTextView
@@ -113,6 +110,7 @@
             android:layout_height="wrap_content"
             android:text="Febin Jishal"
             android:textSize="13sp"
+            android:id="@+id/coordinator"
             />
 
         <com.phacsin.entreprenia.customfonts.MyTextView
@@ -121,23 +119,14 @@
             android:textColor="@color/grey"
             android:paddingTop="10sp"
             android:text="Phone:"
-            android:id="@+id/phone"
             android:textSize="20dp"/>
         <com.phacsin.entreprenia.customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="8590332334"
+            android:id="@+id/phone"
             android:textSize="13sp"
             />
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_login"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
-            android:padding="12dp"
-            android:background="@drawable/corner_radius"
-            android:text="Register"/>
          <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_close"
             android:layout_width="50sp"
