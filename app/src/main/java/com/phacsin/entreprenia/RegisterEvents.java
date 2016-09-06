@@ -21,6 +21,7 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
@@ -42,6 +43,7 @@ public class RegisterEvents extends AppCompatActivity {
     private RecyclerView recyclerView;
     TextView package_name;
     List<String> registered_events = new ArrayList<>();
+    TextView price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,8 @@ public class RegisterEvents extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         recyclerView = (RecyclerView) findViewById(R.id.eventList);
         package_name = (TextView) findViewById(R.id.package_name);
+        price = (TextView) findViewById(R.id.price);
+
         package_name.setText(getIntent().getStringExtra("package_name"));
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
@@ -75,11 +79,53 @@ public class RegisterEvents extends AppCompatActivity {
                         event.category = json.getString("category");
                         eventList.add(event);
                     }
-                    checkRegisteredEvents();
+                    loadPrice();
                 }catch (JSONException e)
                 {
                     Log.d("json_error", response.toString());
                 }
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d("vError", "Error: " + error.getMessage());
+                String errorMsg;
+                if(error instanceof NoConnectionError)
+                    errorMsg = "Network Error";
+                else if(error instanceof TimeoutError)
+                    errorMsg = "Timeout Error";
+                else
+                    errorMsg = "Unknown Error";
+                Snackbar.make(findViewById(android.R.id.content), errorMsg, Snackbar.LENGTH_LONG)
+                        .setAction("RETRY", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                loadEvents();
+                            }
+                        }).show();
+            }
+
+        });
+
+// Adding request to request queue
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        requestQueue.add(strReq);
+    }
+
+    private void loadPrice() {
+        String URL = "http://entreprenia.org/app/total_price.php?email="+sharedPreferences.getString("email","");
+        StringRequest strReq = new StringRequest(Request.Method.GET,
+                URL, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                    Log.d("response", response.toString());
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("total_price",response);
+                    editor.commit();
+                    price.setText("₹ "+response);
+                    checkRegisteredEvents();
             }
         }, new Response.ErrorListener() {
 
@@ -124,6 +170,7 @@ public class RegisterEvents extends AppCompatActivity {
                         JSONObject json = response.getJSONObject(i);
                         registered_events.add(json.getString("event_id"));
                     }
+                    Log.d("registered_events", registered_events.toString());
                     showPackage();
                 }catch (JSONException e)
                 {
@@ -181,28 +228,8 @@ public class RegisterEvents extends AppCompatActivity {
         comp_category = new Category(competition,"Competitions");
         panel_category = new Category(panel,"Panel Discussions");
         List<Category> categories=null;
-        switch (package_id)
-        {
-            case 0:
-                categories = Arrays.asList(talk_category,workshop_category,panel_category);
-                break;
-            case 1:
-                categories = Arrays.asList(talk_category,comp_category,panel_category);
-                break;
-            case 2:
-                categories = Arrays.asList(talk_category,workshop_category,panel_category);
-                break;
-            case 3:
-                categories = Arrays.asList(talk_category,workshop_category,comp_category,panel_category);
-                break;
-            case 4:
-                categories = Arrays.asList(talk_category,workshop_category,comp_category,panel_category);
-                break;
-            default:
-                categories = Arrays.asList(talk_category,workshop_category,comp_category,panel_category);
-                break;
-        }
-        ExpandableAdapter adapter = new ExpandableAdapter(this, categories,registered_events,RegisterEvents.this);
+        categories = Arrays.asList(talk_category,workshop_category,comp_category,panel_category);
+        ExpandableAdapter adapter = new ExpandableAdapter(this, categories,registered_events,RegisterEvents.this,workshop,panel,package_id);
         recyclerView.setAdapter(adapter);
     }
 
