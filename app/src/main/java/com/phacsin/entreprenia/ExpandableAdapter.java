@@ -202,6 +202,199 @@ public class ExpandableAdapter extends ExpandableRecyclerAdapter<ExpandableAdapt
 
 
                         case 1:
+                            if(checkbox.isChecked()) {
+                                if (!checkEconomyPackage(event)) {
+                                    sDialog.setTitleText("Base Package Limit Exceeded");
+                                    sDialog.setConfirmText("Yes");
+                                    sDialog.setCancelText("No");
+                                    sDialog.setContentText("You can either choose 1 Workshop or any of the panel discussions, This event costs 100Rs. Continue? ");
+                                    sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sDialog) {
+                                            String url = "http://entreprenia.org/app/add_event.php?email=" + sharedPreferences.getString("email", "") + "&event_id=" + event.id;
+                                            registerEvent(url);
+                                            int current_price = Integer.parseInt(sharedPreferences.getString("total_price", ""));
+                                            price = String.valueOf(current_price + 100);
+                                            editor.putString("total_price", price);
+                                            editor.commit();
+                                            price_text.setText("₹ " + price);
+                                            registered_events.add(event.id);
+                                            updatePrice();
+                                            sDialog.dismissWithAnimation();
+                                        }
+                                    });
+                                    sDialog.show();
+                                } else {
+                                    sDialog.setCancelText("No");
+                                    sDialog.setConfirmText("Yes");
+                                    sDialog.setTitleText("Are you sure?");
+                                    sDialog.setContentText("Do you want to register for " + event.name);
+                                    sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sDialog) {
+                                            String url = "http://entreprenia.org/app/add_event.php?email=" + sharedPreferences.getString("email", "") + "&event_id=" + event.id;
+                                            registerEvent(url);
+                                            registered_events.add(event.id);
+                                            sDialog.dismissWithAnimation();
+                                        }
+                                    });
+                                    sDialog.show();
+                                }
+                            }
+
+                            else
+                            {
+                                if (!checkEconomyPackage(event)) {
+                                    sDialog.setCancelText("No");
+                                    sDialog.setConfirmText("Yes");
+                                    sDialog.setContentText("Do you want to unregister for " + event_name.getText().toString());
+                                    sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sDialog) {
+                                            String url = "http://entreprenia.org/app/remove_event.php?email=" + sharedPreferences.getString("email", "") + "&event_id=" + event.id;
+                                            registerEvent(url);
+                                            registered_events.remove(event.id);
+                                            int current_price = Integer.parseInt(sharedPreferences.getString("total_price", ""));
+                                            price = String.valueOf(current_price - 100);
+                                            Log.d("price", price);
+                                            editor.putString("total_price", price);
+                                            editor.commit();
+                                            price_text.setText("₹ " + price);
+                                            updatePrice();
+                                            sDialog.dismissWithAnimation();
+                                        }
+                                    });
+                                    sDialog.show();
+                                }
+                                else {
+                                    sDialog.setCancelText("No");
+                                    sDialog.setConfirmText("Yes");
+                                    sDialog.setContentText("Do you want to unregister for " + event_name.getText().toString());
+                                    sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sDialog) {
+                                            String url = "http://entreprenia.org/app/remove_event.php?email=" + sharedPreferences.getString("email", "") + "&event_id=" + event.id;
+                                            registerEvent(url);
+                                            registered_events.remove(event.id);
+                                            sDialog.dismissWithAnimation();
+                                        }
+                                    });
+                                    sDialog.show();
+                                }
+                                sDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                    @Override
+                                    public void onClick(SweetAlertDialog sDialog) {
+                                        sDialog.dismissWithAnimation();
+                                        if (checkbox.isChecked())
+                                            checkbox.setChecked(false);
+                                        else
+                                            checkbox.setChecked(true);
+
+                                    }
+                                });
+                            }
+
+
+                            break;
+                        case 3:
+                            if(checkbox.isChecked()) {
+                                if (!checkBusinessPackage(event)) {
+                                    sDialog.setTitleText("Base Package Limit Exceeded");
+                                    sDialog.setConfirmText("Yes");
+                                    sDialog.setCancelText("No");
+                                    sDialog.setContentText("You can either choose 1 Workshop or any of the panel discussions, This event costs 100Rs. Continue? ");
+                                    sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sDialog) {
+                                            String url = "http://entreprenia.org/app/add_event.php?email=" + sharedPreferences.getString("email", "") + "&event_id=" + event.id;
+                                            registerEvent(url);
+                                            int current_price = Integer.parseInt(sharedPreferences.getString("total_price", ""));
+                                            price = String.valueOf(current_price + 100);
+                                            editor.putString("total_price", price);
+                                            editor.commit();
+                                            price_text.setText("₹ " + price);
+                                            registered_events.add(event.id);
+                                            updatePrice();
+                                            sDialog.dismissWithAnimation();
+                                        }
+                                    });
+                                    sDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sDialog) {
+                                            checkbox.setChecked(false);
+                                            sDialog.dismissWithAnimation();
+                                        }
+                                    });
+                                    sDialog.show();
+                                } else {
+                                    sDialog.setCancelText("No");
+                                    sDialog.setConfirmText("Yes");
+                                    sDialog.setTitleText("Are you sure?");
+                                    sDialog.setContentText("Do you want to register for " + event.name);
+                                    sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sDialog) {
+                                            String url = "http://entreprenia.org/app/add_event.php?email=" + sharedPreferences.getString("email", "") + "&event_id=" + event.id;
+                                            registerEvent(url);
+                                            registered_events.add(event.id);
+                                            sDialog.dismissWithAnimation();
+                                        }
+                                    });
+                                    sDialog.show();
+                                }
+                            }
+
+                            else
+                            {
+                                if (!checkBusinessPackage(event)) {
+                                    sDialog.setContentText("Do you want to unregister for " + event_name.getText().toString());
+                                    sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sDialog) {
+                                            String url = "http://entreprenia.org/app/remove_event.php?email=" + sharedPreferences.getString("email", "") + "&event_id=" + event.id;
+                                            registerEvent(url);
+                                            registered_events.remove(event.id);
+                                            int current_price = Integer.parseInt(sharedPreferences.getString("total_price", ""));
+                                            price = String.valueOf(current_price - 100);
+                                            Log.d("price", price);
+                                            editor.putString("total_price", price);
+                                            editor.commit();
+                                            price_text.setText("₹ " + price);
+                                            updatePrice();
+                                            sDialog.dismissWithAnimation();
+                                        }
+                                    });
+                                    sDialog.show();
+                                }
+                                else {
+                                    sDialog.setContentText("Do you want ro unregister for " + event_name.getText().toString());
+                                    sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sDialog) {
+                                            String url = "http://entreprenia.org/app/remove_event.php?email=" + sharedPreferences.getString("email", "") + "&event_id=" + event.id;
+                                            registerEvent(url);
+                                            registered_events.remove(event.id);
+                                            sDialog.dismissWithAnimation();
+                                        }
+                                    });
+                                    sDialog.show();
+                                }
+                                sDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                    @Override
+                                    public void onClick(SweetAlertDialog sDialog) {
+                                        sDialog.dismissWithAnimation();
+                                        if (checkbox.isChecked())
+                                            checkbox.setChecked(false);
+                                        else
+                                            checkbox.setChecked(true);
+
+                                    }
+                                });
+                            }
+
+
+                            break;
+
                 }
                 }});
 
@@ -233,6 +426,21 @@ public class ExpandableAdapter extends ExpandableRecyclerAdapter<ExpandableAdapt
             return true;
         }
     }
+
+    private boolean checkEconomyPackage(Events event) {
+        Log.d("category",event.category);
+        if(event.category.equals("workshop"))
+                    return false;
+        return true;
+    }
+
+    private boolean checkBusinessPackage(Events event) {
+        Log.d("category",event.category);
+        if(event.category.equals("competition"))
+            return false;
+        return true;
+    }
+
 
     private void registerEvent(final String url) {
         StringRequest strReq = new StringRequest(Request.Method.GET,
