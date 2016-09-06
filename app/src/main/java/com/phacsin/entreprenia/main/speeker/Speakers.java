@@ -6,6 +6,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,11 +52,17 @@ public class Speakers extends AppCompatActivity {
     List<Friend> friendList = new ArrayList<>();
     ListView friends;
     int colors[] = {R.color.blue,R.color.green,R.color.red,R.color.violet};
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_speeker_activity);
         friends = (ListView) findViewById(R.id.friends);
+        toolbar =(Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Speakers");
+        toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+        setSupportActionBar(toolbar);
         loadSpeakers();
         settings = new FlipSettings.Builder().defaultPage(1).build();
         friends.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -108,12 +108,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
 
             @Override
             public void onBitmapFailed(Drawable errorDrawable) {
-                holder.imageView.setImageResource(R.drawable.ent);
             }
 
             @Override
             public void onPrepareLoad(Drawable placeHolderDrawable) {
-                holder.imageView.setImageResource(R.drawable.ent);
             }
         };
         Picasso.with(context).load(event.image).resize(1280,720).onlyScaleDown().into(target);

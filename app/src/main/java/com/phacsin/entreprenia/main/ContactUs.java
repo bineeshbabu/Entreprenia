@@ -3,6 +3,8 @@ package com.phacsin.entreprenia.main;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -14,11 +16,16 @@ import com.phacsin.entreprenia.R;
  */
 public class ContactUs extends AppCompatActivity {
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_contact_us);
-
+        toolbar =(Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Contact");
+        toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+        setSupportActionBar(toolbar);
         LinearLayout lt=(LinearLayout)findViewById(R.id.lay_kiron);
         LinearLayout lt2=(LinearLayout)findViewById(R.id.lay_mail_jyo);
         LinearLayout lt3=(LinearLayout)findViewById(R.id.lay_mail_febin);

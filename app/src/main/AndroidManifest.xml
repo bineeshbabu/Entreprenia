@@ -36,9 +36,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".main.speeker.Speakers"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".PieChartActivity"
+            android:theme="@style/DarkTheme" />
 
         <activity android:name=".main.ContactUs"
+            android:parentActivityName=".PieChartActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".main.partners.Partners"
