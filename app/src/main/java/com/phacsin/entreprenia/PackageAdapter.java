@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.NoConnectionError;
@@ -32,15 +33,17 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageAdapter.MyViewHo
 
     private final View rootView;
     private final Activity activity;
-    private final String package_name;
     private int[] layoutList;
     Context context;
     SweetAlertDialog sDialog;
     SharedPreferences sharedPreferences;
+    TextView package_text;
+
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         public MyViewHolder(final View view) {
             super(view);
+            package_text = (TextView) activity.findViewById(R.id.package_name);
             sharedPreferences = context.getSharedPreferences("prefs", Context.MODE_PRIVATE);
             if(!sharedPreferences.contains("package_id")) {
                 view.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +78,7 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageAdapter.MyViewHo
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(activity,RegisterEvents.class);
-                        intent.putExtra("package_name",package_name);
+                        intent.putExtra("package_name",package_text.getText().toString());
                         activity.startActivity(intent);
                     }
                 });
@@ -95,7 +98,7 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageAdapter.MyViewHo
                 Log.d("Response", response.toString());
                 if(response.equals("Success"))
                 {
-                    Toast.makeText(context, "Success", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "Registered ", Toast.LENGTH_LONG).show();
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putInt("package_id", package_id-1);
                     editor.commit();
@@ -139,7 +142,6 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageAdapter.MyViewHo
         this.context=context;
         this.rootView=rootView;
         this.activity=activity;
-        this.package_name=package_name;
     }
 
     @Override

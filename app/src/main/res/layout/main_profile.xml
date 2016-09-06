@@ -41,7 +41,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="80dp"
                 android:layout_below="@+id/user_profile_photo"
-                android:text="EDC2000"
                 android:textColor="#fff"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -53,7 +52,6 @@
                 android:layout_below="@+id/user_profile_id"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="12dp"
-                android:text="bineeshbabupattat@gmail.com"
                 android:textColor="#fff"
                 android:textSize="14sp" />
         </RelativeLayout>

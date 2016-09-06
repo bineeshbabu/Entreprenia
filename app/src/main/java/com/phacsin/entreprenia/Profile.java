@@ -159,18 +159,15 @@ public class Profile extends AppCompatActivity {
 
     private void loadUUID() {
         String URL = "http://entreprenia.org/app/uuid_fetch.php?email="+email;
-        if(!sharedPreferences.contains("uid")) {
+        Log.d("UUID_url",URL);
             JsonObjectRequest strReq = new JsonObjectRequest(Request.Method.GET,
                     URL, null, new Response.Listener<JSONObject>() {
 
                 @Override
                 public void onResponse(JSONObject response) {
-                    Log.d("Response", response.toString());
+                    Log.d("Response UUID", response.toString());
                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                     QR_URL = "https://chart.googleapis.com/chart?cht=qr&chl="+response.optString("uuid")+"&choe=UTF-8&chs=500x500";
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("uid", response.optString("uuid"));
-                    editor.commit();
                     uid.setText(response.optString("uuid"));
                     Picasso.with(getApplicationContext()).load(QR_URL).into(qr_code);
                 }
@@ -200,11 +197,4 @@ public class Profile extends AppCompatActivity {
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             requestQueue.add(strReq);
         }
-        else {
-            String id = sharedPreferences.getString("uid","");
-            QR_URL = "https://chart.googleapis.com/chart?cht=qr&chl="+id+"&choe=UTF-8&chs=500x500";
-            Picasso.with(getApplicationContext()).load(QR_URL).into(qr_code);
-            uid.setText(id);
-        }
-    }
 }

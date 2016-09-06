@@ -53,7 +53,6 @@ public class RegisterEvents extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.eventList);
         package_name = (TextView) findViewById(R.id.package_name);
         price = (TextView) findViewById(R.id.price);
-
         package_name.setText(getIntent().getStringExtra("package_name"));
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);

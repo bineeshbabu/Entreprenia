@@ -86,13 +86,18 @@ public class EventFragment extends android.support.v4.app.Fragment {
                         JSONObject json = response.getJSONObject(i);
                         Events event = new Events();
                         event.name = json.getString("event_name");
-                        event.image = "http://entreprenia.org/img/events_app/" + json.getString("event_image");
+                        event.image = "http://entreprenia.org/img/events/" + json.getString("event_image");
+                        Log.d("response", response.toString());
                         event.brief = json.getString("event_short_app");
                         event.rules = json.getString("rule1");
                         event.date = json.getString("date");
                         event.phone = json.getString("phone");
                         event.coordinator = json.getString("coordinator");
                         event.speaker = json.getString("speaker");
+                        event.venue = json.getString("venue");
+                        event.prize = json.getString("cash_prize");
+                        event.time = json.getString("time");
+
                         eventList.add(event);
                     }
                     Adapter = new EventAdapter(eventList,getActivity());

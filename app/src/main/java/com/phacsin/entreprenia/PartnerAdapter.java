@@ -60,11 +60,13 @@ public class PartnerAdapter extends RecyclerView.Adapter<PartnerAdapter.MyViewHo
 
             @Override
             public void onBitmapFailed(Drawable errorDrawable) {
+                holder.imageView.setImageResource(R.drawable.ent);
 
             }
 
             @Override
             public void onPrepareLoad(Drawable placeHolderDrawable) {
+                holder.imageView.setImageResource(R.drawable.ent);
 
             }
         };

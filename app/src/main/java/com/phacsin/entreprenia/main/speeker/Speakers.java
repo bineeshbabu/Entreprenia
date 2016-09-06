@@ -159,11 +159,13 @@ public class Speakers extends AppCompatActivity {
 
                         @Override
                         public void onBitmapFailed(Drawable errorDrawable) {
+                            holder.leftAvatar.setImageResource(R.drawable.ent);
 
                         }
 
                         @Override
                         public void onPrepareLoad(Drawable placeHolderDrawable) {
+                            holder.leftAvatar.setImageResource(R.drawable.ent);
 
                         }
                     };
@@ -175,12 +177,13 @@ public class Speakers extends AppCompatActivity {
 
                         @Override
                         public void onBitmapFailed(Drawable errorDrawable) {
+                            holder.rightAvatar.setImageResource(R.drawable.ent);
 
                         }
 
                         @Override
                         public void onPrepareLoad(Drawable placeHolderDrawable) {
-
+                            holder.rightAvatar.setImageResource(R.drawable.ent);
                         }
                     };
                     try {

@@ -28,7 +28,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
     private List<Events> eventsList;
     Context context;
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView title,dialog_title,speaker,rules,date,coordinator,phone;
+        TextView title,dialog_title,speaker,rules,date,coordinator,phone,time,venue,prize;
         ImageView imageView,close;
         MyTextView details;
         Button button;
@@ -51,6 +51,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
                     rules = (MyTextView) view.findViewById(R.id.event_rules);
                     date = (MyTextView) view.findViewById(R.id.date);
                     phone = (MyTextView) view.findViewById(R.id.phone);
+                    time = (MyTextView) view.findViewById(R.id.time);
+                    venue = (MyTextView) view.findViewById(R.id.venue);
+                    prize = (MyTextView) view.findViewById(R.id.prize);
+
                     button = (Button) view.findViewById(R.id.btn_close);
                     details.setText(event.brief);
                     dialog_title.setText(event.name);
@@ -59,6 +63,9 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
                     date.setText(event.date);
                     speaker.setText(event.speaker);
                     phone.setText(event.phone);
+                    venue.setText(event.venue);
+                    prize.setText(event.prize);
+                    time.setText(event.time);
 
                     final MaterialDialog mMaterialDialog = new MaterialDialog(context);
                     mMaterialDialog.setContentView(view);
@@ -101,12 +108,12 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
 
             @Override
             public void onBitmapFailed(Drawable errorDrawable) {
-
+                holder.imageView.setImageResource(R.drawable.ent);
             }
 
             @Override
             public void onPrepareLoad(Drawable placeHolderDrawable) {
-
+                holder.imageView.setImageResource(R.drawable.ent);
             }
         };
         Picasso.with(context).load(event.image).resize(1280,720).onlyScaleDown().into(target);

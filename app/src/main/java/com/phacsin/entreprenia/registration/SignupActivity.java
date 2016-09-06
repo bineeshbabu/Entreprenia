@@ -41,6 +41,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -97,6 +98,24 @@ public class SignupActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+       accomodation.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               if (accomodation.isChecked()) {
+                   SweetAlertDialog sDialog = new SweetAlertDialog(SignupActivity.this, SweetAlertDialog.WARNING_TYPE);
+                   sDialog.setTitleText("Are you sure?");
+                   sDialog.setContentText("Additional charges will be applied for accommodation.");
+                   sDialog.setConfirmText("OK");
+                   sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                       @Override
+                       public void onClick(SweetAlertDialog sDialog) {
+                           sDialog.dismissWithAnimation();
+                       }
+                   });
+                   sDialog.show();
+               }
+           }
+       });
         college.setThreshold(2);
         college.setDropDownBackgroundResource(R.color.black);
         college.addTextChangedListener(new TextWatcher() {
@@ -175,7 +194,15 @@ public class SignupActivity extends AppCompatActivity {
             accom="Yes";
         else
             accom="No";
-        String URL = "http://entreprenia.org/app/register.php?fname="+fname.getText().toString()+"&lname="+lname.getText().toString()+"&email="+_emailText.getText().toString()+"&password"+_passwordText.getText().toString()+"&phone="+phone.getText().toString()+"&college="+college.getText().toString()+"&gender="+gender+"&accom="+accom;
+        String URL = null;
+        try {
+             URL = "http://entreprenia.org/app/register.php?fname=" + URLEncoder.encode(fname.getText().toString(), "UTF-8") + "&lname=" + URLEncoder.encode(lname.getText().toString(), "UTF-8") + "&email=" + _emailText.getText().toString() + "&password=" + URLEncoder.encode(_passwordText.getText().toString(), "UTF-8") + "&phone=" + URLEncoder.encode(phone.getText().toString(), "UTF-8") + "&college=" + URLEncoder.encode(_passwordText.getText().toString(), "UTF-8") + "&gender=" + gender + "&accom=" + accom;
+        }
+        catch (Exception e)
+        {
+
+        }
+        Log.d("reg_URL",URL);
         StringRequest strReq = new StringRequest(Request.Method.GET,
                 URL, new Response.Listener<String>() {
 
@@ -226,9 +253,6 @@ public class SignupActivity extends AppCompatActivity {
                 .setTitleText("Good job")
                 .setContentText("You are Registered")
                 .show();
-        SharedPreferences.Editor editor = sharedpreferences.edit();
-        editor.putString("email", _emailText.getText().toString());
-        editor.commit();
         _signupButton.setEnabled(true);
         setResult(RESULT_OK, null);
         finish();
@@ -249,12 +273,15 @@ public class SignupActivity extends AppCompatActivity {
         String email_text = _emailText.getText().toString();
         String password_text = _passwordText.getText().toString();
 
-        if (fname_text.isEmpty() || fname_text.length() < 3) {
+        if (fname_text.isEmpty() || fname_text.length() < 3 ) {
             fname.setError("at least 3 characters");
             valid = false;
         } else {
             fname.setError(null);
         }
+
+        if(fname.getText().toString().contains(" "))
+         fname.getText().toString().replace(" ","%20");
 
         if (email_text.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email_text).matches()) {
             _emailText.setError("enter a valid email address");
