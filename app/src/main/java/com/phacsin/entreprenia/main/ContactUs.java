@@ -18,10 +18,11 @@ public class ContactUs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_contact_us);
+
         LinearLayout lt=(LinearLayout)findViewById(R.id.lay_kiron);
-        LinearLayout lt2=(LinearLayout)findViewById(R.id.lay_jyo);
-        LinearLayout lt3=(LinearLayout)findViewById(R.id.lay_febin);
-        LinearLayout lt4=(LinearLayout)findViewById(R.id.lay_hari);
+        LinearLayout lt2=(LinearLayout)findViewById(R.id.lay_mail_jyo);
+        LinearLayout lt3=(LinearLayout)findViewById(R.id.lay_mail_febin);
+        LinearLayout lt4=(LinearLayout)findViewById(R.id.lay_mail_hari);
 
         lt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +76,7 @@ public class ContactUs extends AppCompatActivity {
                 final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
                 emailIntent.setType("text/plain");
                 emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{  "febin@entreprenia.org"});
-                emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Hello Coordinator");
+                emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Hello Febin");
                 emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "I'm Ready for Entreprenia");
 
 
@@ -92,36 +93,14 @@ public class ContactUs extends AppCompatActivity {
 
             }
         });
-        lt3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
-                emailIntent.setType("text/plain");
-                emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{  "hari@entreprenia.org"});
-                emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Hello Coordinator");
-                emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "I'm Ready for Entreprenia");
 
-
-                emailIntent.setType("message/rfc822");
-
-                try {
-                    startActivity(Intent.createChooser(emailIntent,
-                            "Send email using..."));
-                } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(getApplicationContext(),
-                            "No email clients installed.",
-                            Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
         lt4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
                 emailIntent.setType("text/plain");
-                emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{  "kiron@entreprenia.org"});
-                emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Hello Sir");
+                emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{  "hari@entreprenia.org"});
+                emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Hello Hari");
                 emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "I'm Ready for Entreprenia");
 
 
@@ -138,6 +117,7 @@ public class ContactUs extends AppCompatActivity {
 
             }
         });
+
 
     }
 
