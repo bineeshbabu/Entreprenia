@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 
 import com.phacsin.entreprenia.PieChartActivity;
 import com.phacsin.entreprenia.R;
+import com.phacsin.entreprenia.customfonts.Helvetica;
 
 /**
  * Created by Bineesh P Babu on 12-08-2016.
@@ -39,7 +40,7 @@ public class SplashScreen extends Activity {
 
         anim = AnimationUtils.loadAnimation(this, R.anim.translate_bottom_up);
         anim.reset();
-        ImageView iv = (ImageView) findViewById(R.id.splash);
+        Helvetica iv =(Helvetica)findViewById(R.id.story1title);
         iv.clearAnimation();
         iv.startAnimation(anim);
 
