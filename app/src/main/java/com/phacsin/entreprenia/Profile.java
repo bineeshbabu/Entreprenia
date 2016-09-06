@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -45,6 +46,7 @@ public class Profile extends AppCompatActivity {
     @InjectView(R.id.user_email) TextView  email_text;
     @InjectView(R.id.package_text) TextView  package_text;
     @InjectView(R.id.user_profile_photo) ImageView qr_code;
+    @InjectView(R.id.logout) Button logout;
 
     SharedPreferences sharedPreferences;
     String email;
@@ -69,11 +71,20 @@ public class Profile extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         ButterKnife.inject(this);
         sharedPreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE);
-        /*SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.remove("package_id");
-        editor.commit();*/
         email = sharedPreferences.getString("email","");
         email_text.setText(email);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.remove("email");
+                editor.remove("package_id");
+                editor.remove("uuid");
+                editor.commit();
+                startActivity(new Intent(getApplicationContext(),PieChartActivity.class));
+                finish();
+            }
+        });
         if(!sharedPreferences.contains("package_id"))
         {
             notSelectedPackage();

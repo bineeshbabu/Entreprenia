@@ -18,6 +18,9 @@
     <color name="primary_dark">#142E3C</color>
     <color name="card_grey">#363b41</color>
 
+    <color name="black_card">#303030</color>
+
+
 
     <!-- Screens background color-->
     <color name="bg_screen1">#f64c73</color>
