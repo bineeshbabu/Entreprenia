@@ -19,6 +19,8 @@
                 android:gravity="center"
                 android:text="Do you know Entreprenia 15?" />
 
+
+
             <!--   <View
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
@@ -65,11 +67,21 @@
                 android:padding="20dp"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:text="For the first time in South India,an Engineering College organised such a summit. The summit was packed with competitions, talks, workshops, panel discussions and kickstarter.It was a 2 day Summit hosted in NSS College of Engineering, Palakkad at September 19,20 2015 by the IEDC Cell, NSSCE in association with District Industries Centre, Palakkad, Kerala."
+                android:text="For the first time in South India,an Engineering College organised such a summit. "
                 android:textSize="18sp"
                 discrollve:discrollve_alpha="true"
                 discrollve:discrollve_translation="fromBottom" />
 
+            <com.phacsin.entreprenia.customfonts.Helvetica
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="The summit was packed with competitions, talks, workshops, panel discussions and kickstarter.It was a 2 day Summit hosted in NSS College of Engineering, Palakkad at September 19,20 2015 by the IEDC Cell, NSSCE in association with District Industries Centre, Palakkad, Kerala."
+                discrollve:discrollve_alpha="true"
+                discrollve:discrollve_translation="fromRight" />
             <include layout="@layout/event_fragment_divider"/>
 
            <ImageView
