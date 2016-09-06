@@ -127,7 +127,7 @@ public class RegisterEvents extends AppCompatActivity {
                     showPackage();
                 }catch (JSONException e)
                 {
-                    Log.d("json_error", response.toString());
+                    Log.d("json_error", e.toString());
                 }
             }
         }, new Response.ErrorListener() {

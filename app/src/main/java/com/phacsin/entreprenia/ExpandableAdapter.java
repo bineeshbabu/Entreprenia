@@ -82,9 +82,11 @@ public class ExpandableAdapter extends ExpandableRecyclerAdapter<ExpandableAdapt
         public void bind(final Events event) {
 
             event_name.setText(event.name);
-            Log.d("event_id",event.id);
+            Log.d("event_id",event.id  + " " + getLayoutPosition());
             if(registered_events.contains(event.id))
                 checkbox.setChecked(true);
+            else
+                checkbox.setChecked(false);
             checkbox.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
