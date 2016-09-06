@@ -80,8 +80,14 @@
             android:textStyle="bold"/>
 
         <include layout="@layout/event_fragment_divider_2"/>
-
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical">
 
         <com.phacsin.entreprenia.customfonts.MyTextView
             android:layout_width="wrap_content"
@@ -89,12 +95,12 @@
             android:textColor="@color/grey"
             android:text="Date:"
             android:paddingTop="10sp"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <com.phacsin.entreprenia.customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="25/09/2016"
-            android:textSize="13sp"
+            android:textSize="12sp"
             android:id="@+id/date"
             />
 
@@ -104,12 +110,12 @@
             android:text="Coordinator:"
             android:paddingTop="10sp"
             android:textColor="@color/grey"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <com.phacsin.entreprenia.customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Febin Jishal"
-            android:textSize="13sp"
+            android:textSize="12sp"
             android:id="@+id/coordinator"
             />
 
@@ -119,15 +125,65 @@
             android:textColor="@color/grey"
             android:paddingTop="10sp"
             android:text="Phone:"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <com.phacsin.entreprenia.customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="8590332334"
             android:id="@+id/phone"
-            android:textSize="13sp"
+            android:textSize="12sp"
             />
-         <android.support.v7.widget.AppCompatButton
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true">
+
+                <com.phacsin.entreprenia.customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey"
+                    android:text="Time:"
+                    android:paddingTop="10sp"
+                    android:textSize="16dp"/>
+                <com.phacsin.entreprenia.customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10.30 AM"
+                    android:textSize="12sp"
+                    />
+
+                <com.phacsin.entreprenia.customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Venue:"
+                    android:paddingTop="10sp"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp"/>
+                <com.phacsin.entreprenia.customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Venue 1"
+                    android:textSize="12sp"
+                    />
+
+                <com.phacsin.entreprenia.customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey"
+                    android:paddingTop="10sp"
+                    android:text="Cash Prize:"
+                    android:textSize="16dp"/>
+                <com.phacsin.entreprenia.customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5K"
+                    android:textSize="13sp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_close"
             android:layout_width="50sp"
             android:layout_height="50sp"

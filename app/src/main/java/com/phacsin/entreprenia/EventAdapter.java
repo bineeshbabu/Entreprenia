@@ -29,7 +29,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
     Context context;
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView title,dialog_title,speaker,rules,date,coordinator,phone;
-        ImageView imageView;
+        ImageView imageView,close;
         MyTextView details;
         Button button;
 
@@ -37,6 +37,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
             super(view);
             title = (TextView) view.findViewById(R.id.event_name);
             imageView = (ImageView) view.findViewById(R.id.event_image);
+
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
