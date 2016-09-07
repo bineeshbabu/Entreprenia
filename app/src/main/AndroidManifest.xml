@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.phacsin.entreprenia">
+    package="com.phacsin.entreprenia16">
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-sdk
+        android:minSdkVersion="15" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/entreprenia"
@@ -10,7 +12,7 @@
         tools:replace="android:icon,android:theme"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".splash.SplashScreen"
+        <activity android:name="com.phacsin.entreprenia16.splash.SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,43 +21,43 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".registration.LoginActivity"
+        <activity android:name="com.phacsin.entreprenia16.registration.LoginActivity"
             android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".registration.SignupActivity"
+        <activity android:name="com.phacsin.entreprenia16.registration.SignupActivity"
             android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".main.EventsActivity"
-            android:parentActivityName=".PieChartActivity"
+        <activity android:name="com.phacsin.entreprenia16.main.EventsActivity"
+            android:parentActivityName="com.phacsin.entreprenia16.PieChartActivity"
             android:label="Events"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".main.Entreprenia"
+        <activity android:name="com.phacsin.entreprenia16.main.Entreprenia"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".main.speeker.Speakers"
-            android:parentActivityName=".PieChartActivity"
+        <activity android:name="com.phacsin.entreprenia16.main.speeker.Speakers"
+            android:parentActivityName="com.phacsin.entreprenia16.PieChartActivity"
             android:theme="@style/DarkTheme" />
 
-        <activity android:name=".main.ContactUs"
-            android:parentActivityName=".PieChartActivity"
+        <activity android:name="com.phacsin.entreprenia16.main.ContactUs"
+            android:parentActivityName="com.phacsin.entreprenia16.PieChartActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".main.partners.Partners"
+        <activity android:name="com.phacsin.entreprenia16.main.partners.Partners"
             android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".PieChartActivity"
+            android:parentActivityName="com.phacsin.entreprenia16.PieChartActivity"
             />
-        <activity android:name=".PieChartActivity"
+        <activity android:name="com.phacsin.entreprenia16.PieChartActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".Profile"
+        <activity android:name="com.phacsin.entreprenia16.Profile"
             android:theme="@style/DarkTheme"
             android:noHistory="true"/>
-        <activity android:name=".registration.ForgotPassword"
+        <activity android:name="com.phacsin.entreprenia16.registration.ForgotPassword"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RegisterEvents"
+        <activity android:name="com.phacsin.entreprenia16.RegisterEvents"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

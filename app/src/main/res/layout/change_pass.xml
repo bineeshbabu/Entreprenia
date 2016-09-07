@@ -24,7 +24,7 @@
         android:layout_marginLeft="10sp"
         android:layout_centerInParent="true">
 
-        <com.phacsin.entreprenia.customfonts.HelveticaEditText
+        <com.phacsin.entreprenia16.customfonts.HelveticaEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
@@ -42,7 +42,7 @@
         android:layout_marginLeft="10sp"
         android:layout_centerInParent="true">
 
-        <com.phacsin.entreprenia.customfonts.HelveticaEditText
+        <com.phacsin.entreprenia16.customfonts.HelveticaEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
@@ -60,7 +60,7 @@
         android:layout_marginLeft="10sp"
         android:layout_centerInParent="true">
 
-        <com.phacsin.entreprenia.customfonts.HelveticaEditText
+        <com.phacsin.entreprenia16.customfonts.HelveticaEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"

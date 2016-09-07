@@ -55,7 +55,7 @@
                                         android:layout_height="35sp"
                                         android:id="@+id/card_rs_img1"
                                         android:src="@drawable/rupees"/>
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_toRightOf="@+id/card_rs_img1"
@@ -65,7 +65,7 @@
                                         android:textColor="@color/white"/>
 
                                 </LinearLayout>
-                                <com.phacsin.entreprenia.customfonts.Helvetica
+                                <com.phacsin.entreprenia16.customfonts.Helvetica
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="20sp"
@@ -101,7 +101,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:orientation="vertical">
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="11sp"
@@ -118,7 +118,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -137,7 +137,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -156,7 +156,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -175,7 +175,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -237,7 +237,7 @@
                                         android:layout_height="35sp"
                                         android:id="@+id/card_rs_img2"
                                         android:src="@drawable/rupees"/>
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_toRightOf="@+id/card_rs_img2"
@@ -246,7 +246,7 @@
                                         android:textStyle="bold"
                                         android:textColor="@color/white"/>
                                 </LinearLayout>
-                                <com.phacsin.entreprenia.customfonts.Helvetica
+                                <com.phacsin.entreprenia16.customfonts.Helvetica
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="20sp"
@@ -282,7 +282,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:orientation="vertical">
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="11sp"
@@ -299,7 +299,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -318,7 +318,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -337,7 +337,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -356,7 +356,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -420,7 +420,7 @@
                                         android:layout_height="35sp"
                                         android:id="@+id/card_rs_img3"
                                         android:src="@drawable/rupees"/>
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_toRightOf="@+id/card_rs_img3"
@@ -429,7 +429,7 @@
                                         android:textStyle="bold"
                                         android:textColor="@color/white"/>
                                 </LinearLayout>
-                                <com.phacsin.entreprenia.customfonts.Helvetica
+                                <com.phacsin.entreprenia16.customfonts.Helvetica
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="20sp"
@@ -465,7 +465,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:orientation="vertical">
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="11sp"
@@ -482,7 +482,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -501,7 +501,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -520,7 +520,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -539,7 +539,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -603,7 +603,7 @@
                                         android:layout_height="35sp"
                                         android:id="@+id/card_rs_img4"
                                         android:src="@drawable/rupees"/>
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_toRightOf="@+id/card_rs_img4"
@@ -612,7 +612,7 @@
                                         android:textStyle="bold"
                                         android:textColor="@color/white"/>
                                 </LinearLayout>
-                                <com.phacsin.entreprenia.customfonts.Helvetica
+                                <com.phacsin.entreprenia16.customfonts.Helvetica
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="20sp"
@@ -648,7 +648,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:orientation="vertical">
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="11sp"
@@ -665,7 +665,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -684,7 +684,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -703,7 +703,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -722,7 +722,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -741,7 +741,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -804,7 +804,7 @@
                                         android:layout_height="35sp"
                                         android:id="@+id/card_rs_img5"
                                         android:src="@drawable/rupees"/>
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_toRightOf="@+id/card_rs_img5"
@@ -813,7 +813,7 @@
                                         android:textStyle="bold"
                                         android:textColor="@color/white"/>
                                 </LinearLayout>
-                                <com.phacsin.entreprenia.customfonts.Helvetica
+                                <com.phacsin.entreprenia16.customfonts.Helvetica
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="20sp"
@@ -849,7 +849,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:orientation="vertical">
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="11sp"
@@ -866,7 +866,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -885,7 +885,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -904,7 +904,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -923,7 +923,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -942,7 +942,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -1005,7 +1005,7 @@
                                         android:layout_height="35sp"
                                         android:id="@+id/card_rs_img6"
                                         android:src="@drawable/rupees"/>
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_toRightOf="@+id/card_rs_img4"
@@ -1014,7 +1014,7 @@
                                         android:textStyle="bold"
                                         android:textColor="@color/white"/>
                                 </LinearLayout>
-                                <com.phacsin.entreprenia.customfonts.Helvetica
+                                <com.phacsin.entreprenia16.customfonts.Helvetica
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="20sp"
@@ -1050,7 +1050,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:orientation="vertical">
-                                    <com.phacsin.entreprenia.customfonts.Helvetica
+                                    <com.phacsin.entreprenia16.customfonts.Helvetica
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="11sp"
@@ -1067,7 +1067,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -1086,7 +1086,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -1105,7 +1105,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -1124,7 +1124,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"
@@ -1143,7 +1143,7 @@
                                             android:layout_width="11sp"
                                             android:layout_height="11sp"
                                             android:src="@drawable/tick"/>
-                                        <com.phacsin.entreprenia.customfonts.Helvetica
+                                        <com.phacsin.entreprenia16.customfonts.Helvetica
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingLeft="10sp"

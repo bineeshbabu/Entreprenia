@@ -14,7 +14,7 @@
         android:paddingRight="10dp"
         android:minWidth="300dp"
         android:minHeight="400dp">
-        <com.phacsin.entreprenia.customfonts.MyTextView
+        <com.phacsin.entreprenia16.customfonts.MyTextView
             android:id="@+id/event_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:textSize="30dp"
             android:textColor="@color/blue"
             android:textStyle="bold"/>
-        <com.phacsin.entreprenia.customfonts.MyTextView
+        <com.phacsin.entreprenia16.customfonts.MyTextView
             android:id="@+id/event_brief"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,14 +35,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <com.phacsin.entreprenia.customfonts.MyTextView
+            <com.phacsin.entreprenia16.customfonts.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Speaker:"
                 android:paddingTop="10sp"
                 android:textSize="20dp"
                 android:textColor="@color/red"/>
-            <com.phacsin.entreprenia.customfonts.MyTextView
+            <com.phacsin.entreprenia16.customfonts.MyTextView
                 android:id="@+id/speaker"
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="10sp"
@@ -51,7 +51,7 @@
                 android:textSize="18sp"
                 />
         </LinearLayout>
-        <com.phacsin.entreprenia.customfonts.MyTextView
+        <com.phacsin.entreprenia16.customfonts.MyTextView
             android:id="@+id/event_rules_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             android:textSize="25dp"
             android:textColor="@color/blue"
             android:textStyle="bold"/>
-        <com.phacsin.entreprenia.customfonts.MyTextView
+        <com.phacsin.entreprenia16.customfonts.MyTextView
             android:id="@+id/event_rules"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
             android:layout_marginTop="5sp"
             android:textColor="@color/grey"/>
 
-        <com.phacsin.entreprenia.customfonts.MyTextView
+        <com.phacsin.entreprenia16.customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Event Details"
@@ -89,14 +89,14 @@
             android:layout_alignParentLeft="true"
             android:orientation="vertical">
 
-        <com.phacsin.entreprenia.customfonts.MyTextView
+        <com.phacsin.entreprenia16.customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey"
             android:text="Date:"
             android:paddingTop="10sp"
             android:textSize="16dp"/>
-        <com.phacsin.entreprenia.customfonts.MyTextView
+        <com.phacsin.entreprenia16.customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="25/09/2016"
@@ -104,14 +104,14 @@
             android:id="@+id/date"
             />
 
-        <com.phacsin.entreprenia.customfonts.MyTextView
+        <com.phacsin.entreprenia16.customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Coordinator:"
             android:paddingTop="10sp"
             android:textColor="@color/grey"
             android:textSize="16dp"/>
-        <com.phacsin.entreprenia.customfonts.MyTextView
+        <com.phacsin.entreprenia16.customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Febin Jishal"
@@ -119,14 +119,14 @@
             android:id="@+id/coordinator"
             />
 
-        <com.phacsin.entreprenia.customfonts.MyTextView
+        <com.phacsin.entreprenia16.customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey"
             android:paddingTop="10sp"
             android:text="Phone:"
             android:textSize="16dp"/>
-        <com.phacsin.entreprenia.customfonts.MyTextView
+        <com.phacsin.entreprenia16.customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="8590332334"
@@ -140,14 +140,14 @@
                 android:orientation="vertical"
                 android:layout_alignParentRight="true">
 
-                <com.phacsin.entreprenia.customfonts.MyTextView
+                <com.phacsin.entreprenia16.customfonts.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey"
                     android:text="Time:"
                     android:paddingTop="10sp"
                     android:textSize="16dp"/>
-                <com.phacsin.entreprenia.customfonts.MyTextView
+                <com.phacsin.entreprenia16.customfonts.MyTextView
                     android:id="@+id/time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -155,14 +155,14 @@
                     android:textSize="12sp"
                     />
 
-                <com.phacsin.entreprenia.customfonts.MyTextView
+                <com.phacsin.entreprenia16.customfonts.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Venue:"
                     android:paddingTop="10sp"
                     android:textColor="@color/grey"
                     android:textSize="16dp"/>
-                <com.phacsin.entreprenia.customfonts.MyTextView
+                <com.phacsin.entreprenia16.customfonts.MyTextView
                     android:id="@+id/venue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -170,14 +170,14 @@
                     android:textSize="12sp"
                     />
 
-                <com.phacsin.entreprenia.customfonts.MyTextView
+                <com.phacsin.entreprenia16.customfonts.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey"
                     android:paddingTop="10sp"
                     android:text="Cash Prize:"
                     android:textSize="16dp"/>
-                <com.phacsin.entreprenia.customfonts.MyTextView
+                <com.phacsin.entreprenia16.customfonts.MyTextView
                     android:id="@+id/prize"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

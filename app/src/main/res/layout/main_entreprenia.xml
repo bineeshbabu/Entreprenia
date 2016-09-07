@@ -9,7 +9,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="600dp"
                 android:background="@android:color/white"
@@ -19,7 +19,7 @@
                 android:gravity="center"
                 android:text="What is Entreprenia?" />
 
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
@@ -29,7 +29,7 @@
                 android:gravity="center"
                 android:text="Entreprenia is one of its Kind ENTREPRENEURSHIP Summit Held at NSS College of Engineering ,Palakkad ,Kerala. We aim to develop the entrepreneurship spirit and culture in the people in our country by providing a platform for the startups to get nurtured into a company.." />
 
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="600dp"
                 android:background="@android:color/white"
@@ -79,7 +79,7 @@
                 android:src="@drawable/coc"
                 discrollve:discrollve_translation="fromRight" />-->
 
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
@@ -90,7 +90,7 @@
                 discrollve:discrollve_alpha="true"
                 discrollve:discrollve_translation="fromBottom" />
 
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
@@ -111,7 +111,7 @@
                 android:src="@drawable/dignitaries"
                 discrollve:discrollve_scaleX="true"
                 discrollve:discrollve_scaleY="true"  />
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -120,7 +120,7 @@
                 android:text="16"
                 discrollve:discrollve_alpha="true"
                 discrollve:discrollve_translation="fromBottom" />
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -140,7 +140,7 @@
                 android:src="@drawable/visited"
                 discrollve:discrollve_alpha="true"
                 discrollve:discrollve_translation="fromRight" />
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -149,7 +149,7 @@
                 android:text="1200"
                 discrollve:discrollve_alpha="true"
                 discrollve:discrollve_translation="fromBottom" />
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -168,7 +168,7 @@
             android:src="@drawable/speekers"
             discrollve:discrollve_scaleX="true"
             discrollve:discrollve_scaleY="true"  />
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -177,7 +177,7 @@
                 android:text="22"
                 discrollve:discrollve_alpha="true"
                 discrollve:discrollve_translation="fromBottom" />
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -197,7 +197,7 @@
                 android:src="@drawable/rocket"
                 discrollve:discrollve_alpha="true"
                 discrollve:discrollve_translation="fromLeft"/>
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -206,7 +206,7 @@
                 android:text="36"
                 discrollve:discrollve_alpha="true"
                 discrollve:discrollve_translation="fromBottom" />
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -225,7 +225,7 @@
                 android:layout_gravity="center"
                 android:src="@drawable/startup"
                 discrollve:discrollve_translation="fromBottom"/>
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -238,7 +238,7 @@
                 android:layout_marginBottom="5dp"
                 discrollve:discrollve_translation="fromBottom" />
 
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -250,7 +250,7 @@
                 discrollve:discrollve_alpha="true"
                 android:layout_marginBottom="5dp"
                 discrollve:discrollve_translation="fromRight" />
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="40sp"
                 android:padding="5dp"
@@ -261,7 +261,7 @@
                 discrollve:discrollve_alpha="true"
                 android:layout_marginBottom="5dp"
                 discrollve:discrollve_translation="fromLeft" />
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="40sp"
                 android:padding="5dp"
@@ -272,7 +272,7 @@
                 discrollve:discrollve_alpha="true"
                 android:layout_marginBottom="5dp"
                 discrollve:discrollve_translation="fromBottom" />
-            <com.phacsin.entreprenia.customfonts.Helvetica
+            <com.phacsin.entreprenia16.customfonts.Helvetica
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"

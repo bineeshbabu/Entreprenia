@@ -18,7 +18,7 @@
         android:src="@drawable/ent"
         app:siSquare="true"/>
 
-    <com.phacsin.entreprenia.customfonts.Helvetica
+    <com.phacsin.entreprenia16.customfonts.Helvetica
         android:layout_width="wrap_content"
         android:id="@+id/story1title"
         android:layout_height="wrap_content"

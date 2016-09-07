@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <com.phacsin.entreprenia.customfonts.HelveticaEditText
+            <com.phacsin.entreprenia16.customfonts.HelveticaEditText
                 android:id="@+id/input_fname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <com.phacsin.entreprenia.customfonts.HelveticaEditText
+            <com.phacsin.entreprenia16.customfonts.HelveticaEditText
                 android:id="@+id/input_lname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <com.phacsin.entreprenia.customfonts.HelveticaEditText
+            <com.phacsin.entreprenia16.customfonts.HelveticaEditText
                 android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <com.phacsin.entreprenia.customfonts.HelveticaEditText
+            <com.phacsin.entreprenia16.customfonts.HelveticaEditText
                 android:id="@+id/input_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <com.phacsin.entreprenia.customfonts.HelveticaEditText
+            <com.phacsin.entreprenia16.customfonts.HelveticaEditText
                 android:id="@+id/input_confirmpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <com.phacsin.entreprenia.customfonts.HelveticaEditText
+            <com.phacsin.entreprenia16.customfonts.HelveticaEditText
                 android:id="@+id/input_cnum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
             android:background="@drawable/corner_radius"
             android:text="Create Account"/>
 
-        <com.phacsin.entreprenia.customfonts.Helvetica
+        <com.phacsin.entreprenia16.customfonts.Helvetica
             android:id="@+id/link_login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
