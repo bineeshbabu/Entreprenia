@@ -68,6 +68,13 @@
                 android:text="You haven't selected any package yet"
                 android:textStyle="bold"
                 android:textSize="18dp"/>
+            <TextView
+                android:id="@+id/selec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textStyle="bold"
+                android:textSize="10dp"/>
             <android.support.v7.widget.RecyclerView
                 android:layout_marginTop="10dp"
                 android:id="@+id/packageList"

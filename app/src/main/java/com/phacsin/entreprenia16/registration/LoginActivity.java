@@ -106,7 +106,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(String response) {
                 Log.d(TAG, response.toString());
                 if(response.equals("Success")) {
-                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("email", _emailText.getText().toString());
                     editor.commit();
@@ -117,7 +116,12 @@ public class LoginActivity extends AppCompatActivity {
                 {
                     pDialog.hide();
                     _loginButton.setEnabled(true);
-                    Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
+                  /*  Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();*/
+                    new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.ERROR_TYPE)
+                            .setTitleText("Info")
+                            .setContentText(response)
+                            .setConfirmText("Ok")
+                            .show();
                 }
 
             }
@@ -175,8 +179,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
-
         _loginButton.setEnabled(true);
     }
 

@@ -57,6 +57,7 @@ public class SignupActivity extends AppCompatActivity {
     @InjectView(R.id.input_cname) AutoCompleteTextView college;
     @InjectView(R.id.input_email) EditText _emailText;
     @InjectView(R.id.input_password) EditText _passwordText;
+    @InjectView(R.id.input_confirmpassword) EditText conf_passwordText;
     @InjectView(R.id.btn_signup) Button _signupButton;
     @InjectView(R.id.link_login) TextView _loginLink;
     @InjectView(R.id.male_radio) RadioButton  male;
@@ -214,7 +215,12 @@ public class SignupActivity extends AppCompatActivity {
                 else
                 {
                     pDialog.hide();
-                    Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
+                    /*Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();*/
+                    new SweetAlertDialog(SignupActivity.this, SweetAlertDialog.ERROR_TYPE)
+                            .setTitleText("error")
+                            .setContentText(response)
+                            .setConfirmText("Ok")
+                            .show();
                 }
 
             }
@@ -251,15 +257,25 @@ public class SignupActivity extends AppCompatActivity {
     public void onSignupSuccess() {
         new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
                 .setTitleText("Good job")
-                .setContentText("You are Registered")
+                .setContentText("Verification mail has been sent to your mail")
+                .setConfirmText("Ok")
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sweetAlertDialog) {
+                        finish();
+                    }
+                })
                 .show();
         _signupButton.setEnabled(true);
-        setResult(RESULT_OK, null);
-        finish();
+
     }
 
     public void onSignupFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                .setTitleText("Info")
+                .setContentText("Registration Failed")
+                .setConfirmText("Try again")
+                .show();
 
         _signupButton.setEnabled(true);
     }
@@ -268,10 +284,13 @@ public class SignupActivity extends AppCompatActivity {
         boolean valid = true;
 
         String fname_text = fname.getText().toString();
-        String mobile = phone.getText().toString();
 
         String email_text = _emailText.getText().toString();
         String password_text = _passwordText.getText().toString();
+        String confirmpass = conf_passwordText.getText().toString();
+        String clg = college.getText().toString();
+        String mobile = phone.getText().toString();
+
 
         if (fname_text.isEmpty() || fname_text.length() < 3 ) {
             fname.setError("at least 3 characters");
@@ -295,13 +314,27 @@ public class SignupActivity extends AppCompatActivity {
             valid = false;
         } else {
             _passwordText.setError(null);
+            if(!password_text.equals(confirmpass)){
+                conf_passwordText.setError("password mismatch");
+                valid = false;
+            }
+            else {
+                conf_passwordText.setError(null);
+            }
         }
 
-        if (mobile.isEmpty()&&password_text.length()==10) {
-            _passwordText.setError("enter a valid mobile number");
+        if (clg.isEmpty()) {
+            college.setError("select college");
             valid = false;
         } else {
-            _passwordText.setError(null);
+            college.setError(null);
+        }
+
+        if (mobile.isEmpty() || mobile.length()<10||mobile.length()>10) {
+            phone.setError("enter a valid mobile number");
+            valid = false;
+        } else {
+            phone.setError(null);
         }
 
         return valid;

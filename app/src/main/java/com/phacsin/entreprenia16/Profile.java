@@ -41,6 +41,7 @@ public class Profile extends AppCompatActivity {
     @InjectView(R.id.user_profile_id) TextView  uid;
     @InjectView(R.id.user_email) TextView  email_text;
     @InjectView(R.id.package_text) TextView  package_text;
+    @InjectView(R.id.selec) TextView  selec_;
     @InjectView(R.id.user_profile_photo) ImageView qr_code;
     @InjectView(R.id.logout) Button logout;
 
@@ -91,6 +92,7 @@ public class Profile extends AppCompatActivity {
             int Package_sel[] = new int[1];
             Package_sel[0]=layoutList[package_id];
             package_text.setText("Selected Package");
+            selec_.setText("Click the Card For Registration");
             PackageAdapter adapter = new PackageAdapter(Package_sel,getApplicationContext(),rootView,Profile.this,"Package");
             recyclerView.setAdapter(adapter);
         }
