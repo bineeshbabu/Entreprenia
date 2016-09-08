@@ -9,7 +9,7 @@
         <RelativeLayout
             android:id="@+id/profile_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="300sp"
             android:background="@color/green"
             android:elevation="4dp"
             android:paddingBottom="24dp">
@@ -38,10 +38,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="80dp"
                 android:layout_below="@+id/user_profile_photo"
                 android:textColor="#fff"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -50,7 +49,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/user_profile_id"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="12dp"
                 android:textColor="#fff"
                 android:textSize="14sp" />
         </RelativeLayout>
