@@ -290,15 +290,15 @@ public class SignupActivity extends AppCompatActivity {
             _emailText.setError(null);
         }
 
-        if (password_text.isEmpty() || password_text.length() < 4 || password_text.length() > 10) {
-            _passwordText.setError("between 4 and 10 alphanumeric characters");
+        if (password_text.isEmpty() || password_text.length() < 4) {
+            _passwordText.setError("greater than 4 alphanumeric characters");
             valid = false;
         } else {
             _passwordText.setError(null);
         }
 
         if (mobile.isEmpty()&&password_text.length()==10) {
-            _passwordText.setError("eenter a valid mobile number");
+            _passwordText.setError("enter a valid mobile number");
             valid = false;
         } else {
             _passwordText.setError(null);
