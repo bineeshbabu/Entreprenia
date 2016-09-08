@@ -1,5 +1,361 @@
-<com.diegocarloslima.fgelv.lib.FloatingGroupExpandableListView
-    android:id="@+id/my_list"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/dark_green"
+            app:layout_scrollFlags="snap|scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/dark_green"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:layout_margin="2dp"
+                card_view:cardBackgroundColor="@color/white"
+                android:elevation="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:contentPadding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+
+                    <com.phacsin.entreprenia16.customfonts.Helvetica
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:textColor="@color/green"
+                        android:text="Prof. Kiron K R"
+                        android:layout_alignParentTop="true"/>
+
+                    <com.phacsin.entreprenia16.customfonts.Helvetica
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/green"
+                        android:text="Convener"
+                        android:layout_marginTop="5sp"
+                        android:textSize="10dp"
+                        android:layout_below="@+id/textView"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lyout_kiran_number"
+                        android:layout_marginTop="5sp"
+                        android:layout_below="@+id/textView2">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <com.phacsin.entreprenia16.customfonts.Helvetica
+                                android:id="@+id/contact_number"
+                                android:textColor="@color/green"
+                                android:layout_marginTop="5dp"
+                                android:layout_centerInParent="true"
+                                android:autoLink="phone"
+                                android:textSize="15sp"
+                                android:textColorLink="@color/green"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+91 9496329746"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lay_kiron"
+                        android:layout_below="@+id/lyout_kiran_number">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <com.phacsin.entreprenia16.customfonts.Helvetica
+
+                                android:id="@+id/contact_mail"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="5sp"
+                                android:layout_width="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/green"
+                                android:text="kiron@entreprenia.org"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view4"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@color/transparent"
+                android:layout_margin="2dp"
+                card_view:cardBackgroundColor="@color/white"
+                android:elevation="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:contentPadding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <com.phacsin.entreprenia16.customfonts.Helvetica
+                        android:id="@+id/jyothish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:text="Jyothish Krishna"
+                        android:textColor="@color/green"
+                        android:layout_alignParentTop="true"/>
+
+                    <com.phacsin.entreprenia16.customfonts.Helvetica
+                        android:id="@+id/pani_jyothish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:textSize="10dp"
+                        android:text="Public Relation Officer"
+                        android:textColor="@color/green"
+                        android:layout_below="@+id/jyothish"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pani_jyothish"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/lay_jyo">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <com.phacsin.entreprenia16.customfonts.Helvetica
+                                android:id="@+id/jyo_number"
+                                android:layout_centerInParent="true"
+                                android:textColor="@color/green"
+                                android:layout_marginTop="5dp"
+                                android:autoLink="phone"
+                                android:textSize="15sp"
+                                android:textColorLink="@color/green"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+919447930838"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lay_mail_jyo"
+                        android:layout_below="@+id/lay_jyo">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <com.phacsin.entreprenia16.customfonts.Helvetica
+                                android:id="@+id/contact_jyo"
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/green"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="jyothish@entreprenia.org"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view2"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="130dp"
+                android:background="@color/transparent"
+                android:layout_margin="2dp"
+                card_view:cardBackgroundColor="@color/white"
+                android:elevation="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:contentPadding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <com.phacsin.entreprenia16.customfonts.Helvetica
+                        android:id="@+id/febin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:text="Febin Jishal"
+                        android:textColor="@color/green"
+                        android:layout_alignParentTop="true"/>
+
+                    <com.phacsin.entreprenia16.customfonts.Helvetica
+                        android:id="@+id/pani"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Student Coordinator"
+                        android:textColor="@color/green"
+                        android:textSize="10dp"
+                        android:layout_below="@+id/febin"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pani"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/lay_febin">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <com.phacsin.entreprenia16.customfonts.Helvetica
+                                android:id="@+id/febin_number"
+                                android:textColor="@color/green"
+                                android:layout_marginTop="5dp"
+                                android:layout_centerInParent="true"
+                                android:autoLink="phone"
+                                android:textSize="15dp"
+                                android:textColorLink="@color/green"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+918907905554"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lay_mail_febin"
+                        android:layout_below="@+id/lay_febin"
+                        android:clickable="true">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <com.phacsin.entreprenia16.customfonts.Helvetica
+                                android:id="@+id/contact_febin"
+                                android:layout_marginTop="8dp"
+                                android:layout_centerInParent="true"
+                                android:textColor="@color/green"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="febin@entreprenia.org"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view3"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@color/transparent"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:elevation="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:contentPadding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <com.phacsin.entreprenia16.customfonts.Helvetica
+                        android:id="@+id/hari"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:text="Harikrishnan R"
+                        android:textColor="@color/green"
+                        android:layout_alignParentTop="true"/>
+
+                    <com.phacsin.entreprenia16.customfonts.Helvetica
+                        android:id="@+id/pani1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/green"
+                        android:text="Student Advisor,IEDC NSSCE"
+                        android:textSize="10dp"
+                        android:layout_below="@+id/hari"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pani1"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/lay_hari">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <com.phacsin.entreprenia16.customfonts.Helvetica
+                                android:id="@+id/hari_number"
+                                android:layout_marginTop="5dp"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoLink="phone"
+                                android:textSize="15dp"
+                                android:textColorLink="@color/green"
+                                android:textColor="@color/green"
+                                android:text="+91 9605871373"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lay_mail_hari"
+                        android:layout_below="@+id/lay_hari">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <com.phacsin.entreprenia16.customfonts.Helvetica
+                                android:id="@+id/contact_hari"
+                                android:layout_marginTop="8dp"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/green"
+                                android:textSize="15dp"
+                                android:text="hari@entreprenia.org"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

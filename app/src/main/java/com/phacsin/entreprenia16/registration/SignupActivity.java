@@ -197,7 +197,7 @@ public class SignupActivity extends AppCompatActivity {
             accom="No";
         String URL = null;
         try {
-             URL = "http://entreprenia.org/app/register.php?fname=" + URLEncoder.encode(fname.getText().toString(), "UTF-8") + "&lname=" + URLEncoder.encode(lname.getText().toString(), "UTF-8") + "&email=" + _emailText.getText().toString() + "&password=" + URLEncoder.encode(_passwordText.getText().toString(), "UTF-8") + "&phone=" + URLEncoder.encode(phone.getText().toString(), "UTF-8") + "&college=" + URLEncoder.encode(_passwordText.getText().toString(), "UTF-8") + "&gender=" + gender + "&accom=" + accom;
+             URL = "http://entreprenia.org/app/register.php?fname=" + URLEncoder.encode(fname.getText().toString(), "UTF-8") + "&lname=" + URLEncoder.encode(lname.getText().toString(), "UTF-8") + "&email=" + _emailText.getText().toString() + "&password=" + URLEncoder.encode(_passwordText.getText().toString(), "UTF-8") + "&phone=" + URLEncoder.encode(phone.getText().toString(), "UTF-8") + "&college=" + URLEncoder.encode(college.getText().toString(), "UTF-8") + "&gender=" + gender + "&accom=" + accom;
         }
         catch (Exception e)
         {

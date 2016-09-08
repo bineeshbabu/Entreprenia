@@ -37,7 +37,7 @@ public class ContactUs extends AppCompatActivity {
                 emailIntent.setType("text/plain");
                 emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{  "kiron@entreprenia.org"});
                 emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Hello Sir");
-                emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "I'm Ready for Entreprenia");
+                emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "");
 
 
                 emailIntent.setType("message/rfc822");
@@ -60,7 +60,7 @@ public class ContactUs extends AppCompatActivity {
                 emailIntent.setType("text/plain");
                 emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{  "jyothish@entreprenia.org"});
                 emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Hello Sir");
-                emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "I'm Ready for Entreprenia");
+                emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "");
 
 
                 emailIntent.setType("message/rfc822");
@@ -83,7 +83,7 @@ public class ContactUs extends AppCompatActivity {
                 emailIntent.setType("text/plain");
                 emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{  "febin@entreprenia.org"});
                 emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Hello Febin");
-                emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "I'm Ready for Entreprenia");
+                emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "");
 
 
                 emailIntent.setType("message/rfc822");
@@ -107,7 +107,7 @@ public class ContactUs extends AppCompatActivity {
                 emailIntent.setType("text/plain");
                 emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{  "hari@entreprenia.org"});
                 emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Hello Hari");
-                emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "I'm Ready for Entreprenia");
+                emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "");
 
 
                 emailIntent.setType("message/rfc822");
